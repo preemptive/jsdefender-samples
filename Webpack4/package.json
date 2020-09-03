@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "npm link ../../../packages/jsdefender-core ../../../packages/jsdefender-webpack-plugin --only=production",
     "build": "webpack",
     "build:prod": "npm run build -- --mode=production"
   },
@@ -19,6 +18,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
-    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core.tgz"
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
   }
 }

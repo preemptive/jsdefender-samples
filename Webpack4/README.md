@@ -10,7 +10,8 @@ The Webpack configuration creates a separate chunk for each file. The chunk of `
 ## Getting started
 
 1. For use you need to put your `jsdefender.tgz` to te [`assets`](./assets/) folder of this demo.
-1. Reneme your file to "`preemptive-jsdefender-core.tgz`"
+1. Replace the `{version}` part in [`package.json`](./package.json) based on your \*.tgz.
+1. The jsdefender is disabled by default in development mode. You can enable it on the [`webpack.config.js`](./webpack.config.js) by setting the **`enableInDevelopmentMode`** to **true**.
 
 ## Build and run
 
@@ -67,7 +68,8 @@ Execution time: 0s 562ms
 Now, when you open up the [index.html](dist/index.html) file (which is in the dist directory) in your browser, you should see a beautiful unicorn in the middle and 3 button under it.
 
 If you open up the developer console before you click any of the buttons, you should see `Styles are loaded.` message in the console.
->NOTE: If you get an `Invalid domain!` alert message and the page looks brooken, that is because you probably oppened it with `live server` or something similar. You should open the `index.html` manualy in your browser.
+
+> NOTE: If you get an `Invalid domain!` alert message and the page looks brooken, that is because you probably oppened it with `live server` or something similar. You should open the `index.html` manualy in your browser.
 
 ### First button (_Print component_) expected output:
 
@@ -110,7 +112,6 @@ const {
 } = require("@preemptive/jsdefender-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
-
 module.exports = {
   entry: {
     app: "./src/index.js",
@@ -148,6 +149,7 @@ module.exports = {
     new JSDefenderWebpackPlugin({
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
+      enableInDevelopmentMode: false,
     }),
   ],
 };
