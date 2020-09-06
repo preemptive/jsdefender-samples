@@ -19,7 +19,7 @@ The Webpack configuration creates a separate chunk for each file. The chunk of `
 1. Follow the steps in the [`Getting started`](#getting-started) part.
 1. Run `npm install` &mdash; it installs the dependencies plus symlinks the required JSDefender packages.
 1. Run `npm run build:prod` to create the JSDefender-protected webpack bundles and put them into the `dist` folder.
-1. Execure `npm run start` to check the output in the console.
+1. Open the dist/index.html file in a browser and check the developer console
 
 ## Expected output
 
