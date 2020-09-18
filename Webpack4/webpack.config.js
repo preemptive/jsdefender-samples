@@ -1,9 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const {
-  JSDefenderWebpackPlugin,
-} = require("@preemptive/jsdefender-webpack-plugin");
 const ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 
 module.exports = {
@@ -39,11 +36,6 @@ module.exports = {
     new ExtractCssChunks(),
     new HtmlWebpackPlugin({
       title: "Hello Webpack",
-    }),
-    new JSDefenderWebpackPlugin({
-      configurationFile: "./jsdefender.config.json",
-      quietMode: false,
-      enableInDevelopmentMode: false,
-    }),
+    })
   ],
 };

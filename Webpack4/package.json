@@ -17,8 +17,6 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
+    "webpack-cli": "^3.3.5"
   }
 }
