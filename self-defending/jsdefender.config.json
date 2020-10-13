@@ -1,0 +1,8 @@
+{
+  "settings": {
+    "localDeclarations": false,
+    "stringLiterals": false,
+
+    "selfDefending": true
+  }
+}
