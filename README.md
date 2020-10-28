@@ -4,6 +4,8 @@ This repo contains samples that demonstrate configuring PreEmptive Protection JS
 
 ## Samples in this repo
 
+- [features](features): a collection of sample projects that demonstrate JSDefender protection features
+    - [self-defending](features/self-defending): Self-defending protection (with code tampering detection)
 - [Webpack](Webpack): demonstrates how you can use the JSDefender Webpack plugin to protect code that builds with Webpack4.
 
 ## Prerequisits
