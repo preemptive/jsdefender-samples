@@ -130,5 +130,5 @@ Execution time: 3s 562ms
 ## Differences from the Original Code
 
 - [`package.json`](protected/package.json): new `devDependencies` entries for JSDefender packages
-- [`webpack.config.js`](protected/webpack.config): the configured `JSDefenderWebpackPlugin` in the `plugins` section
+- [`webpack.config.js`](protected/webpack.config.js): the configured `JSDefenderWebpackPlugin` in the `plugins` section
 - [`jsdefender.config.json`](protected/jsdefender.config.json): The JSDefender configuration file
