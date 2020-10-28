@@ -16,8 +16,8 @@ The Webpack configuration creates a separate chunk for each file. The `index.js`
 ## Setting up the JSDefender Toolset
 
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
-1. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](./assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
-1. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](./package.json) based on the version of your `*.tgz` files.
+1. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](protected/assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+1. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](protected/package.json) based on the version of your `*.tgz` files.
 
 ## Build and Run the Sample
 
@@ -129,6 +129,6 @@ Execution time: 3s 562ms
 
 ## Differences from the Original Code
 
-- [`package.json`](./package.json): new `devDependencies` entries for JSDefender packages
-- [`webpack.config.js`](./webpack.config): the configured `JSDefenderWebpackPlugin` in the `plugins` section
-- [`jsdefender.config.json`](./jsdefender.config.json): The JSDefender configuration file
+- [`package.json`](protected/package.json): new `devDependencies` entries for JSDefender packages
+- [`webpack.config.js`](protected/webpack.config): the configured `JSDefenderWebpackPlugin` in the `plugins` section
+- [`jsdefender.config.json`](protected/jsdefender.config.json): The JSDefender configuration file
