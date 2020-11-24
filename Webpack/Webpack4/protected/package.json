@@ -1,10 +1,10 @@
 {
-  "name": "webpack-4-v2-demo",
-  "version": "0.0.1",
+  "name": "webpack-4-demo",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "build:prod": "npm run build -- --mode=production"
+    "build": "webpack --mode=production",
+    "build:dev": "webpack"
   },
   "dependencies": {
     "lodash": "^4.17.15"
@@ -17,6 +17,8 @@
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.5",
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
   }
 }

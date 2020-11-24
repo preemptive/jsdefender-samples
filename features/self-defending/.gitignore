@@ -1,0 +1,8 @@
+# Compiled files
+dist
+
+# Dependency directories
+node_modules/
+
+# JSDefender packages
+assets/**/*.tgz

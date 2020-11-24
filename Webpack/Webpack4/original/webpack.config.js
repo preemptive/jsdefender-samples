@@ -36,6 +36,6 @@ module.exports = {
     new ExtractCssChunks(),
     new HtmlWebpackPlugin({
       title: "Hello Webpack",
-    })
+    }),
   ],
 };
