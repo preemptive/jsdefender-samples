@@ -25,7 +25,7 @@ The Rollup configuration creates a separate chunk for each file. The `index.js` 
 2. Run `npm run build` to create the JSDefender-protected Rollup bundles and put them into the `dist` folder. (Note, this task generates several dozen output lines.)
 3. The project comes with a development server configured, the only thing you have to do is navigate to `http://localhost:10001` in your browser. The app should display a simple screen with three buttons:
 
-![image](./docs-images/display.png)
+![image](./docs-images/display.jpg)
 
 4. Open the Developer Tools in your browser. As you click the buttons, those write messages to the console output.
 
