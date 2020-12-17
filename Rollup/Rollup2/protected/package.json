@@ -1,0 +1,23 @@
+{
+  "name": "rollup2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "build:prod-win": "set NODE_ENV=production && npm run build",
+    "build:prod-linux": "NODE_ENV=production npm run build"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-json": "^4.1.0",
+    "rollup": "^2.34.1",
+    "rollup-plugin-embed-css": "^1.0.19",
+    "rollup-plugin-serve": "^1.1.0",
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
+  }
+}
