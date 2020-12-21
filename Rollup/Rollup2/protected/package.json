@@ -18,6 +18,6 @@
     "rollup-plugin-embed-css": "^1.0.19",
     "rollup-plugin-serve": "^1.1.0",
     "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
+    "@preemptive/jsdefender-rollup-plugin": "file:assets/jsdefender-rollup-plugin-{version}.tgz"
   }
 }

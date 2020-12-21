@@ -9,14 +9,14 @@ The program contains five source files with these dependencies among them:
 The Rollup configuration creates a separate chunk for each file. The `index.js` file is the entry chunk, it loads the other chunks on demand.
 
 - The [original](original) folder contains the *unprotected* version of the code.
-- You can discover [protected](protected) folder to examine the project that leverages JSDefender.
+- The [protected](protected) folder contains the project that leverages JSDefender.
 
 > **Note**: All further explanations assume you use the `protected` folder as the root project directory.
 
 ## Setting up the JSDefender Toolset
 
-1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
-1. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](protected/assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+1. If you have not done so yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
+1. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-rollup-plugin-<version>.tgz` files from your download directory to the [`assets`](protected/assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 1. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](protected/package.json) based on the version of your `*.tgz` files.
 
 ## Build and Run the Sample
@@ -27,7 +27,7 @@ The Rollup configuration creates a separate chunk for each file. The `index.js` 
 
 ![image](./docs-images/display.jpg)
 
-4. Open the Developer Tools in your browser. As you click the buttons, those write messages to the console output.
+4. Open the Developer Tools in your browser. As you click the buttons, the app writes messages to the console output.
 
 ## How It Works
 
@@ -71,8 +71,8 @@ The most relevant part of this file is the `plugins` section that sets up the `J
 [Info] JSDefenderRollupPlugin: Copyright 2019-2020 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderRollupPlugin: Use of this software constitutes acceptance of the accompanying license agreement.
 [Info] JSDefenderRollupPlugin: Processing the following chunks: [index.js,styles-0deb3d90.js,print-21833182.js,alert-0ec61d6b.js,hello-b1250bd7.js,alertchild-dc553c16.js] with destination: dist
-[Info] Licensed to: bprox@preemptive.com
-Floating Build License: ############################47B2
+[Info] Licensed to: [your email address]
+Floating Build License: [your masked license key]
 This software may be used on binaries for general release.
 [Info] Source tree building in progress...
 [Info] Source tree successfully built.
