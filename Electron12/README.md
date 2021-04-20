@@ -1,7 +1,7 @@
 # PreEmptive Electron sample app
 
 ## Prerequisites
-1. Npm or yarn installed
+1. Npm installed
 
 ## Commands
 1. `npm start` to run the build in Dev mode.
@@ -10,32 +10,30 @@
 ## Setting up the JSDefender Toolset
 
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
-1. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](protected/assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
-1. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](protected/package.json) based on the version of your `*.tgz` files.
+2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
+4. Run `npm install` command
 
 ## How It Works
 
-This project uses the `JSDefenderWebpackPlugin` that invokes JSDefender as the last step of the build process. The sample uses this `webpack.config.js` file:
+This project uses the `JSDefenderWebpackPlugin` that invokes JSDefender as the last step of the build process. The sample uses this `webpack.plugins.js` file:
 
 ```javascript
 const {
   JSDefenderWebpackPlugin,
 } = require("@preemptive/jsdefender-webpack-plugin");
 
-module.exports = {
+module.exports = [
   ...
-  plugins: [
-    ...
-    new JSDefenderWebpackPlugin({
-      configurationFile: "./jsdefender.config.json",
-      quietMode: false,
-      enableInDevelopmentMode: false,
-    })
-  ]
+  new JSDefenderWebpackPlugin({
+    configurationFile: "./jsdefender.config.json",
+    quietMode: false,
+    enableInDevelopmentMode: false,
+  })
 };
 ```
 
-The most relevant part of this file is the `plugins` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the project's root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
+Adding plugin sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
 
 ```
 JSDefenderWebpackPlugin:

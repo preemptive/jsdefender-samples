@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build && serve -s build",
+    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
@@ -40,8 +40,8 @@
     ]
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-2.3.0-npm.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-2.3.0-npm.tgz",
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz",
     "file-loader": "~6.2.0",
     "react-app-rewired": "~2.1.8"
   }

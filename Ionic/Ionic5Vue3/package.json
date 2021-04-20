@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.7",
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-2.3.0-npm.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-2.3.0-npm.tgz",
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
