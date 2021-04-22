@@ -15,14 +15,14 @@ export class AuthService {
 
   logIn(username: string, dob: string): Observable<any> {
 
-    let userInfo = {
-      username: username,
-      dob: dob,
+    const userInfo = {
+      username,
+      dob,
       error: '',
       loader: false,
     };
 
-    const url = `https://swapi.dev/api/people/?search=${userInfo.username}`
+    const url = `https://swapi.dev/api/people/?search=${userInfo.username}`;
     return this.http.get<User>(url);
   }
 

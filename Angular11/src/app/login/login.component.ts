@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.getState = this.store.select(selectAuthState);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getState.subscribe((state) => {
       if (state.errorMessage != null) {
         this.errorMessage = state.errorMessage;

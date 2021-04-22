@@ -3,9 +3,7 @@
 ## Prerequisites
 1. Npm installed
 
-## Commands
-1. `ng serve` to run the build in Dev mode.
-2. `ng build --prod` to build in Prod mode.
+> *Remark*: Please name the minimum version of npm to use. The JSDefender team uses v6.14 or over
 
 ## Setting up the JSDefender Toolset
 
@@ -13,6 +11,14 @@
 2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Run `npm install` command
+
+## The Demo Application
+
+> *Remark*: Describe in a few sentences what the application does. If it is important, discuss a few implementation details.
+
+## Commands
+1. `ng serve` to run the build in Dev mode.
+2. `ng build --prod` to build in Prod mode.
 
 ## How It Works
 
@@ -34,6 +40,8 @@ module.exports = function override(config, env) {
 ```
 
 The most relevant part of this file is the `plugin` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
+
+> *Remark*: The output below is not the the one JSDefender emits when using with Angular build pipeline. Change it to an extract from the real  output.
 
 ```
 JSDefenderWebpackPlugin:

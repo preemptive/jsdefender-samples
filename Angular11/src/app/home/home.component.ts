@@ -9,10 +9,9 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   getState: Observable<any>;
   user = null;
 
@@ -21,10 +20,15 @@ export class HomeComponent implements OnInit {
   loader: any;
   name: any;
 
-  constructor(private authService: AuthService, public router: Router, private store: Store<AppState>) { this.getState = this.store.select(selectAuthState); }
+  constructor(
+    private authService: AuthService,
+    public router: Router,
+    private store: Store<AppState>
+  ) {
+    this.getState = this.store.select(selectAuthState);
+  }
 
-  ngOnInit() {
-
+  ngOnInit(): void {
     this.loginUser = JSON.parse(localStorage.getItem('Loginuser'));
 
     this.getState.subscribe((state) => {
@@ -33,26 +37,25 @@ export class HomeComponent implements OnInit {
       }
     });
     this.retrievePeople();
-
   }
   retrievePeople(): void {
     if (this.user) {
       this.loader = true;
-      this.authService.getUser()
-        .subscribe(
-          data => {
-            this.peoples = data;
-            this.loader = false;
-          },
-          error => {
-            this.loader = false;
-            console.log(error);
-          });
+      this.authService.getUser().subscribe(
+        (data) => {
+          this.peoples = data;
+          this.loader = false;
+        },
+        (error) => {
+          this.loader = false;
+          console.log(error);
+        }
+      );
     } else {
       this.router.navigateByUrl('/');
     }
   }
   signout(): void {
-    this.store.dispatch(new LogOut);
+    this.store.dispatch(new LogOut());
   }
 }
