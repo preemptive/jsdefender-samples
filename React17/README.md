@@ -1,8 +1,22 @@
 # PreEmptive React sample app
+## About this project
+This is a Login based project which uses [Swapi people](https://swapi.dev/api/people/1) API to be able to Authenticate at the time of login. And after the successful authentication, in dashboard it displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API. This project showcases how to integrate the JSDefender with your project.
+
+**Sample credentials to login:**
+
+Username: `Luke Skywalker`
+
+DOB: `19BBY`
 
 ## Prerequisites
 1. [Npm](https://nodejs.org/en/download/) installed
 
+## Setting up the JSDefender Toolset
+
+1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
+2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
+4. Run `npm install` command
 ## Commands
 1. `npm start` to run the build in Dev mode.
 2. `npm build` to build in Prod mode. To run:
@@ -10,12 +24,6 @@
     npm install -g serve
     serve -s build
     ```
-## Setting up the JSDefender Toolset
-
-1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
-2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
-3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
-4. Run `npm install` command
 
 ## How It Works
 
@@ -32,7 +40,7 @@ module.exports = function override(config, env) {
     new JSDefenderWebpackPlugin({
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
-      enableInDevelopmentMode: false,
+      enableInDevelopmentMode: true
     })
   );
 };
@@ -55,3 +63,5 @@ Execution time: 3s 562ms
 
 (other messages omitted for the sake of brevity)
 ```
+
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details on how the webpack plugin works refer this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).

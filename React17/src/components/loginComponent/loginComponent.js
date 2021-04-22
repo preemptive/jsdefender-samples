@@ -91,8 +91,9 @@ class LoginComponent extends Component {
                                     required
                                 />
                             </div>
-                            <span className="danger">{this.state.error}</span>
-                            <br />
+                            <div className="form-group">
+                                <span className="danger">{this.state.error}</span>
+                            </div>
                             <button
                                 id="loginButton"
                                 className="btn btn-primary btn-block"

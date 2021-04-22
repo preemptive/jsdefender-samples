@@ -8,7 +8,7 @@
       </div>
       <div className="col-md-4">
         <button
-          className="btn btn-primary float-right margin-top25"
+          className="btn btn-primary float-right margin-top10"
           @click="signout()"
         >
           Logout

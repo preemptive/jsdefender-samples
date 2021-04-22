@@ -25,8 +25,9 @@
               required
             />
           </div>
-          <span className="danger">{{errorMsg}}</span>
-          <br />
+          <div className="form-group">
+            <span className="danger">{{errorMsg}}</span>
+          </div>
           <button
             className="btn btn-primary btn-block"
             type="submit"
@@ -129,8 +130,8 @@
         -ms-border-radius: 10px;
             border-radius: 10px;
   }
-  .margin-top25 {
-    margin-top: 25px;
+  .margin-top10 {
+    margin-top: 10px;
   }
   .response {
     background-color: white;
