@@ -79,6 +79,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    background: url("../images/star\ wars.jpg");
   }
 
   #container strong {
@@ -161,7 +162,7 @@
   }
 
   .response {
-    background-color: #dedede6e;
+    background-color: white;
     margin: 5px 0px;
     height: auto;
     border-radius: 5px;
