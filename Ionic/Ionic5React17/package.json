@@ -67,8 +67,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.7",
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz",
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "file-loader": "~6.2.0",
     "html-webpack-plugin": "~5.3.1",
     "react-app-rewired": "~2.1.8",

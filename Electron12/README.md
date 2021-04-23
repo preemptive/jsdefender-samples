@@ -9,7 +9,7 @@ This project displays list of planets using [SWAPI planets](https://swapi.dev/ap
 ## Setting up the JSDefender Toolset
 
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
-2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+2. Copy the `preemptive-jsdefendercore-<version>.tgz` and `preemptive-jsdefenderwebpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Run `npm install` command
 

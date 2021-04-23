@@ -63,8 +63,8 @@
     }
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz",
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "@electron-forge/cli": "~6.0.0-beta.54",
     "@electron-forge/maker-deb": "~6.0.0-beta.54",
     "@electron-forge/maker-rpm": "~6.0.0-beta.54",
