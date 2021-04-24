@@ -3,7 +3,7 @@ body {
   margin: 0px;
   width: 100%;
   padding: 2rem;
-  background: url("./star\ wars.jpg");
+  background: url("images/starwars.jpg");
 }
 
 .loader {

@@ -4,7 +4,9 @@
 This project displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. This project showcases how to integrate the JSDefender with your project.
 
 ## Prerequisites
-1. [Npm](https://nodejs.org/en/download/) installed
+1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
+2. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
+3. For building iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
 
 ## Setting up the JSDefender Toolset
 
@@ -48,19 +50,30 @@ module.exports = function override(config, env) {
 The most relevant part of this file is the `plugin` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
 
 ```
-JSDefenderWebpackPlugin:
-Preemptive Protection JSDefender (v2.0.0-next.0)
-(C) Preemptive, 2019-2020
-Processing chunk id: 0, name: ...
-Processing chunk id: 1, name: ...
-Processing chunk id: 2, name: ...
-Processing chunk id: 3, name: ...
-Processing chunk id: 4, name: ...
-Info: Developer license is valid.
+[Info] JSDefenderWebpackPlugin: Preemptive Protection JSDefender(TM) (v2.3.0)
+Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
+[Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 0, name: null
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 1, name: main
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 2, name: polyfills-dom
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 3, name: runtime-main (runtime)
 ...
-Execution time: 3s 562ms
+Info: Evaluation Copy.
+Licensed to: ...
+Floating User License: ...
+This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3
+Info: JSDefender is up to date.
+Info: Source tree building in progress...
+Info: File #1 is recognized as 'webpack4-chunk/prod' with 1 module.
+Info: File #2 is recognized as 'webpack4-chunk/prod' with 7 modules.
+Info: File #3 is recognized as 'webpack4-chunk/prod' with 1 module.
+Info: File #4 is recognized as 'webpack4-bundle/prod' with 0 module.
+
+...
+[Info] JSDefenderWebpackPlugin: All chunks are protected successfully.
+[Info] JSDefenderWebpackPlugin: Execution time: 57s 135ms
 
 (other messages omitted for the sake of brevity)
 ```
 
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details on how the webpack plugin works refer this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).

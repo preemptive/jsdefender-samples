@@ -10,7 +10,7 @@ Username: `Luke Skywalker`
 DOB: `19BBY`
 
 ## Prerequisites
-1. [Npm](https://nodejs.org/en/download/) installed
+1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
 
 ## Setting up the JSDefender Toolset
 
@@ -49,19 +49,21 @@ module.exports = {
 The most relevant part of this file is the `plugins` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
 
 ```
-JSDefenderWebpackPlugin:
-Preemptive Protection JSDefender (v2.0.0-next.0)
-(C) Preemptive, 2019-2020
-Processing chunk id: 0, name: ...
-Processing chunk id: 1, name: ...
-Processing chunk id: 2, name: ...
-Processing chunk id: 3, name: ...
-Processing chunk id: 4, name: ...
-Info: Developer license is valid.
+[Info] JSDefenderWebpackPlugin: Preemptive Protection JSDefender(TM) (v2.3.0)
+Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
+[Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.
+[Info] JSDefenderWebpackPlugin: Processing chunk id: app, name: app (runtime)
+[Info] JSDefenderWebpackPlugin: Processing chunk id: chunk-0cce43c0, name: null
+[Info] JSDefenderWebpackPlugin: Processing chunk id: chunk-2d21a3d2, name: null
+[Info] JSDefenderWebpackPlugin: Processing chunk id: chunk-vendors, name: chunk-vendors
 ...
-Execution time: 3s 562ms
-
-(other messages omitted for the sake of brevity)
+Licensed to: ...
+Floating User License: ...
+This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3     
+Info: JSDefender is up to date.
+...
+[Info] JSDefenderWebpackPlugin: All chunks are protected successfully.
+[Info] JSDefenderWebpackPlugin: Execution time: 10s 101ms
 ```
 
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details on how the webpack plugin works refer this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).

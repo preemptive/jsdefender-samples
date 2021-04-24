@@ -49,19 +49,40 @@ module.exports = function override(config, env) {
 The most relevant part of this file is the `plugin` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
 
 ```
-JSDefenderWebpackPlugin:
-Preemptive Protection JSDefender (v2.0.0-next.0)
-(C) Preemptive, 2019-2020
-Processing chunk id: 0, name: ...
-Processing chunk id: 1, name: ...
-Processing chunk id: 2, name: ...
-Processing chunk id: 3, name: ...
-Processing chunk id: 4, name: ...
-Info: Developer license is valid.
+[Info] JSDefenderWebpackPlugin: Preemptive Protection JSDefender(TM) (v2.3.0)
+Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
+[Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 0, name: undefined
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 1, name: main
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 2, name: runtime-main (runtime)
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 3, name: undefined
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 4, name: null
+[Info] JSDefenderWebpackPlugin: Processing chunk id: 5, name: null
+Info: ...
+Licensed to: ...
+Floating User License: ...
+This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3
+Info: JSDefender is up to date.
+Info: Source tree building in progress...
 ...
-Execution time: 3s 562ms
+Info: Source tree successfully built.
+Info: Total length: 203271
+Info: #of scripts: 6
+Info: #of syntax nodes: 65481
+Info: Highest ES version: ES5
+...
+Info: Rendering protected files...
+Info: Protected files rendered successfully.
+[Info] JSDefenderWebpackPlugin: Chunk id: 0, name: undefined is successfully processed
+[Info] JSDefenderWebpackPlugin: Chunk id: 1, name: main is successfully processed
+[Info] JSDefenderWebpackPlugin: Chunk id: 2, name: runtime-main is successfully processed
+[Info] JSDefenderWebpackPlugin: Chunk id: 3, name: undefined is successfully processed
+[Info] JSDefenderWebpackPlugin: Chunk id: 4, name: null is successfully processed
+[Info] JSDefenderWebpackPlugin: Chunk id: 5, name: null is successfully processed
+[Info] JSDefenderWebpackPlugin: All chunks are protected successfully.
+[Info] JSDefenderWebpackPlugin: Execution time: 12s 346ms
 
 (other messages omitted for the sake of brevity)
 ```
 
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details on how the webpack plugin works refer this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
