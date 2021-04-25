@@ -43,9 +43,7 @@ Compiling Renderer Template[Info] JSDefenderWebpackPlugin: Preemptive Protection
 Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.       
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 0, name: main_window (runtime)
-⠙ Compiling Renderer TemplateInfo: Evaluation Copy.
-Licensed to: ...
-Floating User License: ...
+⠙ Compiling Renderer Template
 This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3     
 Info: JSDefender is up to date.
 ⠹ Compiling Renderer TemplateInfo: Source tree building in progress...
