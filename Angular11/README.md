@@ -10,8 +10,7 @@ Username: `Luke Skywalker`
 DOB: `19BBY`
 
 ## Prerequisites
-1. Npm installed
-2. version > 6.14
+1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
 
 ## Setting up the JSDefender Toolset
 
@@ -56,10 +55,6 @@ Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderWebpackPlugin: Processing chunk id: runtime, name: runtime (runtime)
 [Info] JSDefenderWebpackPlugin: Processing chunk id: styles, name: styles
 [Info] JSDefenderWebpackPlugin: Processing chunk id: vendor, name: vendor
-⠏ Generating browser application bundles (phase: emitting)...Warning: Your Floating license will expire on 2021-04-27.
-Info: Evaluation Copy.
-Licensed to: #########################
-Floating User License: ############################288E
 This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3
 Info: JSDefender is up to date.
 Info: Source tree building in progress...
