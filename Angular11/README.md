@@ -30,16 +30,16 @@ This project uses the `JSDefenderWebpackPlugin` that invokes JSDefender as the l
 ```javascript
 const { JSDefenderWebpackPlugin } = require('@preemptive/jsdefender-webpack-plugin');
 
-module.exports = function override(config, env) {
-  ...
-  config.plugins.push(
+module.exports = {
+  plugins: [
+    ...
     new JSDefenderWebpackPlugin({
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
-      enableInDevelopmentMode: true,
+      enableInDevelopmentMode: true
     })
-  );
-};
+  ]
+}
 ```
 
 The most relevant part of this file is the `plugin` section that sets up the `JSDefenderWebpackPlugin`. It reads the protection configuration from the `jsdefender.config.json` file, which you can find in the sample root folder. By setting `quietMode` to false, the plugin displays log messages while Webpack runs:
@@ -72,4 +72,4 @@ Info: Highest ES version: ES2017
 
 (other messages omitted for the sake of brevity)
 ```
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details on how the webpack plugin works refer this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).

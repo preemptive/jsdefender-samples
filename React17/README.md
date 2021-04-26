@@ -9,7 +9,7 @@ Username: `Luke Skywalker`
 DOB: `19BBY`
 
 ## Prerequisites
-1. [Npm](https://nodejs.org/en/download/) installed
+1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
 
 ## Setting up the JSDefender Toolset
 
