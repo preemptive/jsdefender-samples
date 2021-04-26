@@ -8,7 +8,7 @@ module.exports = {
       new JSDefenderWebpackPlugin({
         configurationFile: "./jsdefender.config.json",
         quietMode: false,
-        enableInDevelopmentMode: false,
+        enableInDevelopmentMode: true
       })
     ]
   }

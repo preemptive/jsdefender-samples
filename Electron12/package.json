@@ -63,8 +63,8 @@
     }
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz",
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "@electron-forge/cli": "~6.0.0-beta.54",
     "@electron-forge/maker-deb": "~6.0.0-beta.54",
     "@electron-forge/maker-rpm": "~6.0.0-beta.54",
@@ -74,10 +74,12 @@
     "@marshallofsound/webpack-asset-relocator-loader": "~0.5.0",
     "@typescript-eslint/eslint-plugin": "~4.0.1",
     "@typescript-eslint/parser": "~4.0.1",
+    "copy-webpack-plugin": "~6.4.1",
     "css-loader": "~4.2.1",
     "electron": "12.0.2",
     "eslint": "~7.6.0",
     "eslint-plugin-import": "~2.20.0",
+    "file-loader": "~6.2.0",
     "fork-ts-checker-webpack-plugin": "~5.0.14",
     "node-loader": "~1.0.1",
     "style-loader": "~1.2.1",

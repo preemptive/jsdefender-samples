@@ -11,7 +11,7 @@ DOB: `19BBY`
 
 ## Prerequisites
 1. Npm installed
-2. version >= 6.14
+2. version > 6.14
 
 ## Setting up the JSDefender Toolset
 
