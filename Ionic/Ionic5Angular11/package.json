@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:android": "ionic capacitor run android --livereload --external --address=0.0.0.0",
+    "build:ios": "ionic capacitor run ios --livereload --external --address=0.0.0.0"
   },
   "private": true,
   "dependencies": {

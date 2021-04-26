@@ -23,7 +23,7 @@ This project displays list of planets using [SWAPI planets](https://swapi.dev/ap
 
 ## How It Works
 
-This project uses the `JSDefenderWebpackPlugin` that invokes JSDefender as the last step of the build process. The sample uses [`react-app-rewired`](https://www.npmjs.com/package/react-app-rewired) which overrides webpack configuration using `config-overrides.js` file:
+This project uses the JSDefenderWebpackPlugin that invokes JSDefender as the last step of the build process. The sample uses @angular-builders/custom-webpack which overrides webpack configuration using webpack.partial.js file:
 
 ```javascript
 const { JSDefenderWebpackPlugin } = require('@preemptive/jsdefender-webpack-plugin');
