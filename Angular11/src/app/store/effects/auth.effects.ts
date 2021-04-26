@@ -17,11 +17,11 @@ export class AuthEffects {
     private actions: Actions,
     private authService: AuthService,
     private router: Router,
-  ) { }
+  ) {}
 
-  GetUser = createEffect(() => this.actions.pipe(
-    ofType(AuthActionTypes.GET_USER),
-    switchMap(_ => { return this.authService.getUser() })
+  GetItem = createEffect(() => this.actions.pipe(
+    ofType(AuthActionTypes.GET_ITEM),
+    switchMap(_ => this.authService.getItem())
   ), { dispatch: false });
 
   Login = createEffect(() => this.actions.pipe(

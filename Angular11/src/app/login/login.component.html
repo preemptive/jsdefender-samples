@@ -22,7 +22,7 @@
             <input [(ngModel)]="user.dob" required name="dob" type="text" class="form-control" id="dob"
               placeholder="Enter your DOB">
           </div>
-          <div *ngIf="errorMessage">
+          <div class="form-group" *ngIf="errorMessage">
             <div class="danger" role="alert">
               {{errorMessage}}
             </div>

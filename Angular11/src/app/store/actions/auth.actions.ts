@@ -6,7 +6,7 @@ export enum AuthActionTypes {
   LOGIN_FAILURE = '[Auth] Login Failure',
   LOGIN_FAILURE_DOB = '[Auth] Login Failure Dob',
   LOGOUT = '[Auth] Logout',
-  GET_USER = '[Auth] GetUser'
+  GET_ITEM = '[Auth] Getitem'
 }
 
 export class Login implements Action {
@@ -33,8 +33,8 @@ export class LogOut implements Action {
   readonly type = AuthActionTypes.LOGOUT;
 }
 
-export class GetUser implements Action {
-  readonly type = AuthActionTypes.GET_USER;
+export class GetItem implements Action {
+  readonly type = AuthActionTypes.GET_ITEM;
 }
 
 export type All =
@@ -43,4 +43,4 @@ export type All =
   | LogInFailure
   | LogInFailureDob
   | LogOut
-  | GetUser;
+  | GetItem;

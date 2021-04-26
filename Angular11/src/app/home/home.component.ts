@@ -21,12 +21,12 @@ export class HomeComponent implements OnInit {
   loader: any;
   name: any;
 
-  constructor(private authService: AuthService, public router: Router, private store: Store<AppState>) { this.getState = this.store.select(selectAuthState); }
+  constructor(
+    private authService: AuthService,
+    public router: Router,
+    private store: Store<AppState>) { this.getState = this.store.select(selectAuthState); }
 
-  ngOnInit() {
-
-    this.loginUser = JSON.parse(localStorage.getItem('Loginuser'));
-
+  ngOnInit(): void {
     this.getState.subscribe((state) => {
       if (state.user) {
         this.user = state.user.username;
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   retrievePeople(): void {
     if (this.user) {
       this.loader = true;
-      this.authService.getUser()
+      this.authService.getItem()
         .subscribe(
           data => {
             this.peoples = data;
@@ -53,6 +53,6 @@ export class HomeComponent implements OnInit {
     }
   }
   signout(): void {
-    this.store.dispatch(new LogOut);
+    this.store.dispatch(new LogOut());
   }
 }

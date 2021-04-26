@@ -11,9 +11,6 @@ import { AuthService } from './services/auth.service';
 import { AuthEffects } from './store/effects/auth.effects';
 import { reducers } from './store/app.states';
 import { AppRoutingModule } from './app-routing.module';
-import {
-  TokenInterceptor, ErrorInterceptor
-} from './services/token.interceptor';
 import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { CommonModule } from '@angular/common';
 
@@ -33,17 +30,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     AuthService,
-    AuthGuard,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptor,
-      multi: true
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptor,
-      multi: true
-    }
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
