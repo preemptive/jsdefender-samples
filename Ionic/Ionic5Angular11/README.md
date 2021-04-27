@@ -1,4 +1,4 @@
-# PreEmptive Ionic React sample app
+# PreEmptive Ionic Angular sample app
 
 ## About this project
 This project displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. This project showcases how to integrate the JSDefender with your project.
