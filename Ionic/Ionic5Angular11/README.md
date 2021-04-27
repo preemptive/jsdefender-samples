@@ -17,11 +17,9 @@ This project displays list of planets using [SWAPI planets](https://swapi.dev/ap
 
 ## Commands
 1. `ng serve` to run the build in Dev mode.
-2. `ng serve --prod` to build in Prod mode. To run:
+2. `ng serve --prod` to build in Prod mode.
 3. `npm run build:android` to run the build for Android.
 4. `npm run build:ios` to run the build for iOS.
-
-    ```
 
 ## How It Works
 
