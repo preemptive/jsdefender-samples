@@ -25,23 +25,24 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void{
     this.getState.subscribe((state) => {
+      if(state.loading == false){
+        this.loader = false;
+      }
       if (state.errorMessage != null) {
         this.errorMessage = state.errorMessage;
-      } else {
-        this.errorMessage = state.errorMessage;
-      }
+        this.loader = false;
+      } 
 
     });
   }
 
   onSubmit(): void {
+    this.loader = true;
     const payload = {
       username: this.user.username,
       dob: this.user.dob
     };
-    this.loader = true;
     this.store.dispatch(new Login(payload));
-    this.loader = false;
   }
 
 }
