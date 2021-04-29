@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { apiCall } from "../../helper/NetworkRequest";
 
 class LoginComponent extends Component {
-
     constructor(props) {
         super(props);
         
@@ -14,6 +13,9 @@ class LoginComponent extends Component {
         };
     }
 
+    /**
+     * this method is used to call SWAPI API on login click
+     */
     login = (event) => {
         event.preventDefault();
 
@@ -23,6 +25,11 @@ class LoginComponent extends Component {
             .catch((error) => this.apiFailureCallback(error));
     }
 
+    /**
+     * this method is a success callback function of login api call,
+     * redirect to dashboard if successful
+     * otherwise show error
+     */
     apiSuccessCallback = (resp) => {
         let len = resp.data.results.length;
         let errorMsg = "Username does not exist";
@@ -45,11 +52,17 @@ class LoginComponent extends Component {
         this.setState({ error: errorMsg, loader: false });
     }
 
+    /**
+     * this method is a failure callback function of login api call
+     */
     apiFailureCallback = (error) => {
         this.setState({ error: "Error", loader: false });
         console.error(error);
     }
 
+    /**
+     * this method is used to save keydown changes to state
+     */
     onChangeHandler = (event) => {
         this.setState({[event.target.id]: event.target.value });
     }
