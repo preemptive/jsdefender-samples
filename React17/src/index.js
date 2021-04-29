@@ -8,8 +8,12 @@ import { Switch } from "react-router";
 import rootReducer from './reducers';
 import "./app.css";
 
+/**
+ * Lazy loading components, to load only when the route is requested
+ */
 const LoginLazyComponent = loadable(() => import('./containers/loginContainer'));
 const HomeLazyComponent = loadable(() => import('./containers/homeContainer'));
+
 const store = createStore(rootReducer);
 
 ReactDOM.render(

@@ -42,6 +42,11 @@
         loading: false
       }
     },
+    /**
+    * On mount check if the user exist in store
+    * then, fetch planets data
+    * otherwise, logout
+    */
     mounted() {
       this.user = this.$store.getters.getUser;
       if (this.user === '') {
@@ -52,9 +57,15 @@
       }
     },
     methods: {
+      /**
+       * this method is used to logout the user and redirect to login page
+       */
       signout() {
         this.$router.go(-1);
       },
+      /**
+      * this method is used to get planets information
+      */
       fetchData() {
         this.axios.get('https://swapi.dev/api/planets/?page=1').then((resp) => {
           this.loading = false;

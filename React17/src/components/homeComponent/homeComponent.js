@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { apiCall } from "../../helper/NetworkRequest";
 
 class HomeComponent extends Component {
-
     constructor(props) {
         super(props);
 
@@ -13,6 +12,11 @@ class HomeComponent extends Component {
         };
     }
 
+    /**
+     * On componentDidMount check if the user exist in store
+     * then, fetch planets data
+     * otherwise, logout
+     */
     componentDidMount = () => {
         const { user } = this.props;
         if (user) {
@@ -23,11 +27,17 @@ class HomeComponent extends Component {
         }
     }
 
+    /**
+     * this method is used to logout the user and redirect it to login page
+     */
     signout = () => {
         this.props.removeUser();
         this.props.history.push('/');
     }
 
+    /**
+     * this method is used to get planets information and set to state
+     */
     getResult = () => {
         this.setState({ loader: true });
 
@@ -36,6 +46,9 @@ class HomeComponent extends Component {
             .catch((error) => this.apiFailureCallback(error));
     }
 
+    /**
+     * this method is success callback of planets api
+     */
     apiSuccessCallback = (resp) => {
         let data = resp.data.results;
 
@@ -45,6 +58,9 @@ class HomeComponent extends Component {
         });
     }
 
+    /**
+     * this method is failure callback of planets api
+     */
     apiFailureCallback = (error) => {
         this.setState({ loader: false });
         console.error(error);

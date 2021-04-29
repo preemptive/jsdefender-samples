@@ -6,7 +6,7 @@
     </div>
     <div className="row">
       <div className="offset-md-4 col-md-4 col-xs-12 form-box">
-        <form id="login-form" @submit.prevent="processForm">
+        <form id="login-form" @submit.prevent="login">
           <div className="form-group">
             <label>Username</label>
             <input
@@ -175,7 +175,12 @@
       }
     },
     methods: {
-      processForm: function () {
+      /**
+      * this method is used to call SWAPI API on login click
+      * redirect to dashboard if successful
+      * otherwise show error
+      */
+      login: function () {
         this.loading = true;
         this.axios.get(`https://swapi.dev/api/people/?search=${this.username}`).then((resp) => {
           this.loading = false;
