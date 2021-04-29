@@ -84,5 +84,15 @@ Info: Protected files rendered successfully.
 (other messages omitted for the sake of brevity)
 ```
 
+### Use License and Email in jsdefender.config.json
+Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
+```
+{
+  "license": "C3B940E5A00D492AAB45DD28091E9C53",
+  "email": "my_email@test.com"
+}
+```
+
+For further information on licensing part, please check the following link: [Licensing Info](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html).
 ### Flag: enableInDevelopmentMode
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).

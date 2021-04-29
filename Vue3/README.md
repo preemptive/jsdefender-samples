@@ -67,5 +67,13 @@ Info: JSDefender is up to date.
 [Info] JSDefenderWebpackPlugin: Execution time: 10s 101ms
 ```
 
+### Use License and Email in jsdefender.config.json
+Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
+```
+{
+  "license": "C3B940E5A00D492AAB45DD28091E9C53",
+  "email": "my_email@test.com"
+}
+```
 ### Flag: enableInDevelopmentMode
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
