@@ -24,15 +24,15 @@ export class LoginComponent implements OnInit {
     this.getState = this.store.select(selectAuthState);
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getState.subscribe((state) => {
-      if(state.loading == false){
+      if (state.loading === false) {
         this.loader = false;
       }
       if (state.errorMessage != null) {
         this.errorMessage = state.errorMessage;
         this.loader = false;
-      } 
+      }
 
     });
   }

@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  
+
   getState: Observable<any>;
   user = null;
   peoples: any;
