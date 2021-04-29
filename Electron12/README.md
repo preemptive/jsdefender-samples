@@ -1,7 +1,11 @@
 # PreEmptive Electron sample app
 
-## About this project
-This project displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. This project showcases how to integrate the JSDefender with your project.
+
+## Project Info
+This is a sample Electron app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Electron 12.
+
+## About the BackEnd
+This project displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
 
 ## Prerequisites
 1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
@@ -11,11 +15,20 @@ This project displays list of planets using [SWAPI planets](https://swapi.dev/ap
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
-4. Run `npm install` command
+4. Set the `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
+    ```
+    E.g. C3B940E5A00D492AAB45DD28091E9C53
+
+    With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
+    ```
+
+    For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
+
+5. Run the `npm install` command
 
 ## Commands
 1. `npm start` to run the build in Dev mode.
-2. `npm run package` to create build for target OS.
+2. `npm run package` to create a build for the target OS.
 
 ## How It Works
 
@@ -62,4 +75,5 @@ Info: Protected files rendered successfully.
 (other messages omitted for the sake of brevity)
 ```
 
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
+### Flag: enableInDevelopmentMode
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).

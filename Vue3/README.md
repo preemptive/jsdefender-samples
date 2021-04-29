@@ -29,7 +29,7 @@ DOB: `19BBY`
     With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
     ```
 
-    For more detail refer this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
+    For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
 
 5. Run the `npm install` command
 
@@ -53,7 +53,7 @@ module.exports = {
       new JSDefenderWebpackPlugin({
         configurationFile: "./jsdefender.config.json",
         quietMode: false,
-        enableInDevelopmentMode: true
+        enableInDevelopmentMode: false
       })
     ]
   ]
@@ -78,7 +78,4 @@ Info: JSDefender is up to date.
 [Info] JSDefenderWebpackPlugin: Execution time: 10s 101ms
 ```
 ### Flag: enableInDevelopmentMode
-By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
-
-### Flag: ignoreUnsafeConstructs
-This sample project uses `ignoreUnsafeConstructs: true` in the `jsdefender.config.json` to override the code safety check, which is handy in Vue Dev mode, as the compiled Webpack bundle contains 'eval' statements that are considered unsafe by JsDefender, this option can be removed for the Production mode.
+By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).

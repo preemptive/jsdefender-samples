@@ -33,6 +33,5 @@
         "stringLiterals": true,
         "propertySparsing": true,
         "variableGrouping": true
-    },
-    "ignoreUnsafeConstructs": true
+    }
 }

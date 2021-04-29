@@ -57,6 +57,9 @@
       }
     },
     methods: {
+      /**
+      * this method is used to fetch list of planets from SWAPI, and set data
+      */
       fetchData() {
         this.axios.get('https://swapi.dev/api/planets/?page=1').then((resp) => {
           this.loading = false;
@@ -67,6 +70,9 @@
         });
       }
     },
+    /**
+    * fetch list of planets from SWAPI on mount
+    */
     mounted() {
       this.fetchData();
     },

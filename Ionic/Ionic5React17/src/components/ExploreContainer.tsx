@@ -8,7 +8,6 @@ type MyState = {
 };
 
 class ExploreContainer extends Component<{}, MyState> {
-
   constructor(props: any) {
     super(props);
 
@@ -18,10 +17,16 @@ class ExploreContainer extends Component<{}, MyState> {
     };
   }
 
+  /**
+   * on component mount fetch list of planets from SWAPI
+   */
   componentDidMount = () => {
     this.getResult();
   }
   
+  /**
+   * this method is used to fetch the list of planets
+   */
   getResult = () => {
     this.setState({ loader: true });
 
@@ -30,6 +35,9 @@ class ExploreContainer extends Component<{}, MyState> {
       .catch((error) => this.apiFailureCallback(error));
   }
 
+  /**
+   * this method is planets api success callback, set the data into state
+   */
   apiSuccessCallback = (resp: any) => {
     let data = resp.data.results;
 
@@ -39,6 +47,9 @@ class ExploreContainer extends Component<{}, MyState> {
     });
   }
 
+  /**
+   * this method is planets api failure callback, shows error
+   */
   apiFailureCallback = (error: any) => {
     this.setState({ loader: false });
     console.error(error);

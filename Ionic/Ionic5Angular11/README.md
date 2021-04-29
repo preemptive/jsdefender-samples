@@ -13,7 +13,7 @@ This project displays list of planets using [SWAPI planets](https://swapi.dev/ap
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
-4. Run `npm install` command
+4. Run the `npm install` command
 
 ## Commands
 1. `ng serve` to run the build in Dev mode.
@@ -68,4 +68,4 @@ Info: File #23 is recognized as 'webpack4-chunk/dev' with 1 module.
 (other messages omitted for the sake of brevity)
 ```
 
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).

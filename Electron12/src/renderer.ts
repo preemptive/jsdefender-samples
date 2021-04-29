@@ -30,6 +30,7 @@ import './index.css';
 import { remote } from 'electron';
 
 const { net } = remote;
+// api to get list of planets from SWAPI
 const request = net.request({
     method: 'GET',
     protocol: 'https:',
@@ -38,6 +39,7 @@ const request = net.request({
     redirect: 'follow'
 });
 
+// on api response set to html
 request.on('response', (response) => {
     response.on('data', (chunk) => {
         const data = JSON.parse(chunk.toString());
