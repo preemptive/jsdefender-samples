@@ -31,7 +31,10 @@ export class HomeComponent implements OnInit {
     });
     this.retrievePeople();
   }
-  
+
+  /**
+   * this method is used to get planets information
+   */
   retrievePeople(): void {
     if (this.user) {
       this.loader = true;
@@ -50,6 +53,9 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  /**
+   * this method is used for logout functionality
+   */
   signout(): void {
     this.store.dispatch(new LogOut());
   }

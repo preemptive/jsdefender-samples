@@ -37,6 +37,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  /**
+   * this method is a success callback function of login api call
+   */
   onSubmit(): void {
     this.loader = true;
     const payload = {
