@@ -1,16 +1,20 @@
 # PreEmptive Angular sample app
 
-## About this project
-This is a Login based project which uses [Swapi people](https://swapi.dev/api/people/1) API to be able to Authenticate at the time of login. And after the successful authentication, in dashboard it displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API. This project showcases how to integrate the JSDefender with your project.
+## Project Info
+This is a sample Angular app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Angular 11.
+
+## About the BackEnd
+This is a Login based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, in dashboard it displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
+SWAPI (Star Wars API) is an open source project which provides the Star Wars Data and used here for the demonstration purpose.
 
 **Sample credentials to login:**
 
 Username: `Luke Skywalker`
-
 DOB: `19BBY`
 
 ## Prerequisites
-1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
+1. JSDefender requires **[Node.js](https://nodejs.org/en/download/)** version 7.10.1 or higher.
+2. **[Npm](https://nodejs.org/en/download/)** installed. 
 
 ## Setting up the JSDefender Toolset
 
@@ -72,4 +76,5 @@ Info: Highest ES version: ES2017
 
 (other messages omitted for the sake of brevity)
 ```
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
+### Flag: enableInDevelopmentMode
+By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
