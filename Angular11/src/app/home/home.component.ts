@@ -12,13 +12,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  
   getState: Observable<any>;
   user = null;
-
   peoples: any;
-  loginUser: any;
   loader: any;
-  name: any;
 
   constructor(
     private authService: AuthService,
@@ -33,6 +31,7 @@ export class HomeComponent implements OnInit {
     });
     this.retrievePeople();
   }
+  
   retrievePeople(): void {
     if (this.user) {
       this.loader = true;
@@ -50,6 +49,7 @@ export class HomeComponent implements OnInit {
       this.router.navigateByUrl('/');
     }
   }
+
   signout(): void {
     this.store.dispatch(new LogOut());
   }
