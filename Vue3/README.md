@@ -4,11 +4,13 @@
 This is a sample Vue app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Vue 3.
 
 ## About the BackEnd
-This is a Login based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, in dashboard it displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
-SWAPI (Star Wars API) is an open source project which provides the Star Wars Data and used here for the demonstration purpose.
+This is a Login-based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, the dashboard displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
+SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
 
 **Sample credentials to login:**
+
 Username: `Luke Skywalker`
+
 DOB: `19BBY`
 
 ## Prerequisites
@@ -20,7 +22,14 @@ DOB: `19BBY`
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
-4. Run `npm install` command
+4. Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
+    ```
+    {
+    "license": "C3B940E5A00D492AAB45DD28091E9C53",
+    "email": "my_email@test.com"
+    }
+    ```
+5. Run the `npm install` command
 
 ## Commands
 1. `npm run serve` to run the build in Dev mode.
@@ -65,15 +74,6 @@ Info: JSDefender is up to date.
 ...
 [Info] JSDefenderWebpackPlugin: All chunks are protected successfully.
 [Info] JSDefenderWebpackPlugin: Execution time: 10s 101ms
-```
-
-### Use License and Email in jsdefender.config.json
-Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
-```
-{
-  "license": "C3B940E5A00D492AAB45DD28091E9C53",
-  "email": "my_email@test.com"
-}
 ```
 ### Flag: enableInDevelopmentMode
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).

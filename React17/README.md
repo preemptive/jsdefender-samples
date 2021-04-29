@@ -4,11 +4,13 @@
 This is a sample React app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with React 17.
 
 ## About the BackEnd
-This is a Login based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, in dashboard it displays list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
-SWAPI (Star Wars API) is an open source project which provides the Star Wars Data and used here for the demonstration purpose.
+This is a Login-based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, the dashboard displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
+SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
 
 **Sample credentials to login:**
+
 Username: `Luke Skywalker`
+
 DOB: `19BBY`
 
 ## Prerequisites
@@ -20,11 +22,18 @@ DOB: `19BBY`
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
+4. Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
+    ```
+    {
+    "license": "C3B940E5A00D492AAB45DD28091E9C53",
+    "email": "my_email@test.com"
+    }
+    ```
+5. Run the `npm install` command
 
 ## Commands
-1. Run `npm install` command
-2. For Development Purpose: `npm start`.
-3. For Production Deployment: `npm run build` to build the bundle. To run: `npm install -g serve` followed by `serve -s build`
+1. For Development Purpose: `npm start`. It could take few seconds to load for the first time.
+2. For Production Deployment: `npm run build` to build the bundle. To run: `npm install -g serve` followed by `serve -s build`
 
 ## How It Works
 
