@@ -22,13 +22,15 @@ DOB: `19BBY`
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
-4. Pass the registered email and the license key as an attribute inside `jsdefender.config.json`. For example:
+4. Set `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
     ```
-    {
-    "license": "C3B940E5A00D492AAB45DD28091E9C53",
-    "email": "my_email@test.com"
-    }
+    E.g. C3B940E5A00D492AAB45DD28091E9C53
+
+    With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
     ```
+
+    For more detail refer this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
+
 5. Run the `npm install` command
 
 ## Commands
@@ -77,3 +79,6 @@ Info: JSDefender is up to date.
 ```
 ### Flag: enableInDevelopmentMode
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer this [link](https://www.preemptive.com/jsdefender/userguide/en/index.html).
+
+### Flag: ignoreUnsafeConstructs
+This sample project uses `ignoreUnsafeConstructs: true` in the `jsdefender.config.json` to override the code safety check, which is handy in Vue Dev mode, as the compiled Webpack bundle contains 'eval' statements that are considered unsafe by JsDefender, this option can be removed for the Production mode.
