@@ -1,4 +1,6 @@
 {
+    "license": "alpha_numeric_license_key",
+    "email": "your_email@test.com",
     "settings": {
         "booleanLiterals": {
             "randomize": true
