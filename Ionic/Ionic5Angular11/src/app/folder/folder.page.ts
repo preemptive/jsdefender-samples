@@ -9,23 +9,25 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+
   public folder: string;
-  films: Observable<any>;
+  items: Observable<any>;
   planets: any;
   loader: any;
+
+  /**
+   * this method is used for get planets information
+   */
   constructor(private activatedRoute: ActivatedRoute, public httpClient: HttpClient) {
     this.loader = true;
-    this.films = this.httpClient.get('https://swapi.dev/api/planets/?page=1');
-    this.films
-    .subscribe(data => {
-     // console.log("2--", data.results);
-      this.planets = data.results;
-      this.loader = false;
-    });
-   }
-
-  ngOnInit() {
-    this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+    this.items = this.httpClient.get('https://swapi.dev/api/planets/?page=1');
+    this.items
+      .subscribe(data => {
+        this.planets = data.results;
+        this.loader = false;
+      });
   }
+
+  ngOnInit() { }
 
 }
