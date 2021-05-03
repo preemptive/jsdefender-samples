@@ -85,5 +85,5 @@ Info: File #4 is recognized as 'webpack4-bundle/prod' with 0 module.
 (other messages omitted for the sake of brevity)
 ```
 
-### Flag: enableInDevelopmentMode
+### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).

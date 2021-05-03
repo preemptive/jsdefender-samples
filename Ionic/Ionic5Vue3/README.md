@@ -47,7 +47,8 @@ module.exports = {
       new JSDefenderWebpackPlugin({
         configurationFile: "./jsdefender.config.json",
         quietMode: false,
-        enableInDevelopmentMode: false
+        enableInDevelopmentMode: false,
+        excludeChunks: [ 'chunk-vendors' ]
       })
     ]
   }
@@ -79,5 +80,8 @@ Info: File #4 is recognized as 'webpack4-bundle/prod' with 0 module.
 
 (other messages omitted for the sake of brevity)
 ```
-### Flag: enableInDevelopmentMode
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+### **enableInDevelopmentMode**
+By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. The chunks in development mode of vue-cli rely heavily on `eval()` statements, JSDefender cannot protect that, but it works perfectly in production mode. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+
+### **excludeChunks**
+Be sure to not include the `vendor` chunk because it has some deprecated code in it that JSDefender cannot protect. If you still encounter problems after excluding the `vendor` chunk, then you should try to exclude other system chunks starting with the `polyfills` and `polyfills-es5`, but if you want maximal performance, exclude every system chunk. The exclusion can be achieved either by including the app's chunks one-by-one, or by excluding the appropriate chunks. Of course you can also include or exclude any other chunk.

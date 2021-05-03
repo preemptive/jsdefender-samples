@@ -95,5 +95,5 @@ Info: Protected files rendered successfully.
 (other messages omitted for the sake of brevity)
 ```
 
-### Flag: enableInDevelopmentMode
+### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
