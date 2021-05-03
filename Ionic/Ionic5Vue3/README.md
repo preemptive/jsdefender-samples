@@ -81,7 +81,9 @@ Info: File #4 is recognized as 'webpack4-bundle/prod' with 0 module.
 (other messages omitted for the sake of brevity)
 ```
 ### **enableInDevelopmentMode**
-By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. The chunks in development mode of vue-cli rely heavily on `eval()` statements, JSDefender cannot protect that, but it works perfectly in production mode. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+The `enableInDevelopmentMode` option of the plugin should be turned off by setting it to `false` in case of vue-cli projects to prevent the app to crash in development mode. The Webpack chunks created by the vue-cli in development mode rely heavily on `eval()` statements to make debugging work but those statements cannot be correctly protected by JSDefender. However, these statements are removed in production mode, so JSDefender is able to protect the project in that mode. Check out the [user guide](https://www.preemptive.com/jsdefender/userguide/en/index.html) for more details.
+
+This option is turned off by default, here we set it to `false` explicitly just to showcase it, feel free to fully omit that line in your configuration.
 
 ### **excludeChunks**
-Be sure to not include the `vendor` chunk because it has some deprecated code in it that JSDefender cannot protect. If you still encounter problems after excluding the `vendor` chunk, then you should try to exclude other system chunks starting with the `polyfills` and `polyfills-es5`, but if you want maximal performance, exclude every system chunk. The exclusion can be achieved either by including the app's chunks one-by-one, or by excluding the appropriate chunks. Of course you can also include or exclude any other chunk.
+We excluded the vendor chunk called `chunk-vendors` by providing it to the `excludeChunks` array. As a best practice, most of the time vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude vendor chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
