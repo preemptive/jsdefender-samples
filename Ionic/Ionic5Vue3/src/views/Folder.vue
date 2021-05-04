@@ -15,8 +15,7 @@
           <ion-title size="large">{{ $route.params.id }}</ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <div id="container">
+      <div id="container" v-if="$route.params.id === 'Inbox'">
         <div className="row">
           <div className="col-md-12">
             <div className="response" v-for="item in data" :key="item.name">
@@ -38,6 +37,7 @@
 
 <script>
   import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { getPlanetData } from "../util/provider";
 
   export default {
     name: 'Folder',
@@ -61,7 +61,8 @@
       * this method is used to fetch list of planets from SWAPI, and set data
       */
       fetchData() {
-        this.axios.get('https://swapi.dev/api/planets/?page=1').then((resp) => {
+        getPlanetData()
+        .then((resp) => {
           this.loading = false;
           this.data = resp.data.results;
         }).catch(() => {

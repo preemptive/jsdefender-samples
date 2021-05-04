@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { apiCall } from "../helper/NetworkRequest";
+import { Component } from 'react';
+import { getPlanetData } from "../util/provider";
 import './ExploreContainer.css';
 
 type MyState = {
@@ -30,9 +30,9 @@ class ExploreContainer extends Component<{}, MyState> {
   getResult = () => {
     this.setState({ loader: true });
 
-    apiCall("https://swapi.dev/api/planets/?page=1")
+    getPlanetData()
       .then((resp) => this.apiSuccessCallback(resp))
-      .catch((error) => this.apiFailureCallback(error));
+      .catch(() => this.apiFailureCallback());
   }
 
   /**
@@ -50,9 +50,8 @@ class ExploreContainer extends Component<{}, MyState> {
   /**
    * this method is planets api failure callback, shows error
    */
-  apiFailureCallback = (error: any) => {
+  apiFailureCallback = () => {
     this.setState({ loader: false });
-    console.error(error);
     alert("Something went wrong!!");
   }
 

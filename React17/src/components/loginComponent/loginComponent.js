@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { apiCall } from "../../helper/NetworkRequest";
+import { getUserProfile } from "../../util/provider";
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class LoginComponent extends Component {
         event.preventDefault();
 
         this.setState({loader: true});
-        apiCall(`https://swapi.dev/api/people/?search=${this.state.username}`)
+        getUserProfile(this.state.username)
             .then((resp) => this.apiSuccessCallback(resp))
             .catch((error) => this.apiFailureCallback(error));
     }
@@ -55,9 +55,8 @@ class LoginComponent extends Component {
     /**
      * this method is a failure callback function of login api call
      */
-    apiFailureCallback = (error) => {
+    apiFailureCallback = () => {
         this.setState({ error: "Error", loader: false });
-        console.error(error);
     }
 
     /**

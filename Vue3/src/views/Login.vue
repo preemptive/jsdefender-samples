@@ -163,6 +163,8 @@
 </style>
 
 <script>
+  import { getUserProfile } from "../util/provider";
+
   export default {
     name: 'Login',
     props: {},
@@ -182,7 +184,7 @@
       */
       login: function () {
         this.loading = true;
-        this.axios.get(`https://swapi.dev/api/people/?search=${this.username}`).then((resp) => {
+        getUserProfile(this.username).then((resp) => {
           this.loading = false;
           let len = resp.data.results.length;
           let isMatch = false;

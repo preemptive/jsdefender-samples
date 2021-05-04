@@ -42,11 +42,12 @@ const { JSDefenderWebpackPlugin } = require('@preemptive/jsdefender-webpack-plug
 
 module.exports = {
   plugins: [
-         new JSDefenderWebpackPlugin({
-            configurationFile: "./jsdefender.config.json",
-            quietMode: false,
-            enableInDevelopmentMode: true,
-        })
+    ...
+    new JSDefenderWebpackPlugin({
+      configurationFile: "./jsdefender.config.json",
+      quietMode: false,
+      enableInDevelopmentMode: true,
+    })
   ]
 }
 ```

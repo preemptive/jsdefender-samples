@@ -32,6 +32,8 @@
   </div>
 </template>
 <script>
+  import { getPlanetData } from "../util/provider";
+
   export default {
     name: 'Home',
     props: {},
@@ -67,7 +69,8 @@
       * this method is used to get planets information
       */
       fetchData() {
-        this.axios.get('https://swapi.dev/api/planets/?page=1').then((resp) => {
+        getPlanetData()
+        .then((resp) => {
           this.loading = false;
           this.data = resp.data.results;
         }).catch(() => {

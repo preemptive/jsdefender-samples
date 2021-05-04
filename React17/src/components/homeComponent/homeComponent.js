@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { apiCall } from "../../helper/NetworkRequest";
+import { getPlanetData } from "../../util/provider";
 
 class HomeComponent extends Component {
     constructor(props) {
@@ -41,9 +41,9 @@ class HomeComponent extends Component {
     getResult = () => {
         this.setState({ loader: true });
 
-        apiCall("https://swapi.dev/api/planets/?page=1")
+        getPlanetData()
             .then((resp) => this.apiSuccessCallback(resp))
-            .catch((error) => this.apiFailureCallback(error));
+            .catch(() => this.apiFailureCallback());
     }
 
     /**
@@ -61,9 +61,8 @@ class HomeComponent extends Component {
     /**
      * this method is failure callback of planets api
      */
-    apiFailureCallback = (error) => {
+    apiFailureCallback = () => {
         this.setState({ loader: false });
-        console.error(error);
         alert("Something went wrong!!");
     }
 
