@@ -3,24 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start:dev": "vue-cli-service serve",
+    "start:prod": "vue-cli-service build && serve -s dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "~0.21.1",
     "core-js": "~3.6.5",
+    "serve": "~11.3.2",
     "vue": "~3.0.0",
     "vue-router": "~4.0.6",
     "vuex": "~4.0.0"
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "~3.0.0",
+    "@vue/devtools": "~5.3.4",
     "babel-eslint": "~10.1.0",
     "eslint": "~6.7.2",
     "eslint-plugin-vue": "~7.0.0"
