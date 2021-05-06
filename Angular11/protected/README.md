@@ -1,4 +1,4 @@
-# PreEmptive Angular sample app
+# JSDefender Angular sample application
 
 ## Project Info
 This is a sample Angular app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Angular 11.
@@ -10,7 +10,6 @@ SWAPI (Star Wars API) is an open-source project which provides the Star Wars Dat
 **Sample credentials to login:**
 
 Username: `Luke Skywalker`
-
 DOB: `19BBY`
 
 ## Prerequisites
@@ -19,14 +18,14 @@ DOB: `19BBY`
 
 ## Setting up the JSDefender Toolset
 
-1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
+1. If you have not done yet, download [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) to your machine.
 2. Copy the `jsdefender-core-<version>.tgz` and `jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Set `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
     ```
-    E.g. C3B940E5A00D492AAB45DD28091E9C53
+    E.g. <your_license_key>
 
-    With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
+    With email: <your_license_key>:my_email@test.com
     ```
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
@@ -34,8 +33,8 @@ DOB: `19BBY`
 5. Run the `npm install` command
 
 ## Commands
-1. `ng serve` to run the build in Dev mode.
-2. `ng build --prod` to build in Prod mode.
+1. `ng build` to run the build in Dev mode. `ng serve` to run the app in Dev mode.
+2. `ng build --prod` to run the build in Prod mode. `ng serve --prod` to run the app in Prod mode.
 
 ## How It Works
 
