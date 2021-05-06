@@ -1,8 +1,7 @@
-# PreEmptive Electron sample app
-
+# JSDefender Electron sample application
 
 ## Project Info
-This is a sample Electron app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Electron 12.
+This is a sample Electron app where [JSDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Electron 12.
 
 ## About the BackEnd
 This project displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
@@ -12,14 +11,14 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Setting up the JSDefender Toolset
 
-1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
+1. If you have not done yet, download [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) to your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Set the `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
     ```
-    E.g. C3B940E5A00D492AAB45DD28091E9C53
+    E.g. <your_license_key>
 
-    With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
+    With email: <your_license_key>:my_email@test.com
     ```
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
@@ -28,7 +27,7 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Commands
 1. `npm start` to run the build in Dev mode.
-2. `npm run package` to create a build for the target OS.
+2. `npm run package` to create a build for the target OS. Please note you normally can only target platform X from platform X.
 
 ## How It Works
 
@@ -57,8 +56,6 @@ Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.       
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 0, name: main_window (runtime)
 ⠙ Compiling Renderer Template
-This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3     
-Info: JSDefender is up to date.
 ⠹ Compiling Renderer TemplateInfo: Source tree building in progress...
 Info: File #1 is recognized as 'webpack4-bundle/prod' with 9 modules.
 Info: Source tree successfully built.
