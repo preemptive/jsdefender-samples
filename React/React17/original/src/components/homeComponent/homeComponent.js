@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { apiCall } from "../../helper/NetworkRequest";
+import { getPlanetData } from "../../util/provider";
 
 class HomeComponent extends Component {
-
     constructor(props) {
         super(props);
 
@@ -13,6 +12,11 @@ class HomeComponent extends Component {
         };
     }
 
+    /**
+     * On componentDidMount check if the user exist in store
+     * then, fetch planets data
+     * otherwise, logout
+     */
     componentDidMount = () => {
         const { user } = this.props;
         if (user) {
@@ -23,19 +27,28 @@ class HomeComponent extends Component {
         }
     }
 
+    /**
+     * this method is used to logout the user and redirect it to login page
+     */
     signout = () => {
         this.props.removeUser();
         this.props.history.push('/');
     }
 
+    /**
+     * this method is used to get planets information and set to state
+     */
     getResult = () => {
         this.setState({ loader: true });
 
-        apiCall("https://swapi.dev/api/planets/?page=1")
+        getPlanetData()
             .then((resp) => this.apiSuccessCallback(resp))
-            .catch((error) => this.apiFailureCallback(error));
+            .catch(() => this.apiFailureCallback());
     }
 
+    /**
+     * this method is success callback of planets api
+     */
     apiSuccessCallback = (resp) => {
         let data = resp.data.results;
 
@@ -45,9 +58,11 @@ class HomeComponent extends Component {
         });
     }
 
-    apiFailureCallback = (error) => {
+    /**
+     * this method is failure callback of planets api
+     */
+    apiFailureCallback = () => {
         this.setState({ loader: false });
-        console.error(error);
         alert("Something went wrong!!");
     }
 
