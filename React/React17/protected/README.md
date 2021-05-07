@@ -51,7 +51,8 @@ module.exports = function override(config, env) {
     new JSDefenderWebpackPlugin({
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
-      enableInDevelopmentMode: true
+      enableInDevelopmentMode: true,
+      excludeChunks: ["runtime-main", "vendors-main"]
     })
   );
 };
@@ -93,3 +94,6 @@ Info: Protected files rendered successfully.
 
 ### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer to the [user guide](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+
+### **excludeChunks**
+We excluded the React runtime chunk called `runtime-main` and the vendor chunk called `vendors-main` by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.

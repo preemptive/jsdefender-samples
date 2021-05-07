@@ -11,7 +11,8 @@ module.exports = function override(config, env) {
         new JSDefenderWebpackPlugin({
             configurationFile: "./jsdefender.config.json",
             quietMode: false,
-            enableInDevelopmentMode: true
+            enableInDevelopmentMode: true,
+            excludeChunks: ["runtime-main", "vendors-main"]
         })
     );
 
