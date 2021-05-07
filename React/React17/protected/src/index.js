@@ -6,6 +6,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { Switch } from "react-router";
 import rootReducer from './reducers';
+import { composeWithDevTools } from "redux-devtools-extension";
 import "./app.css";
 
 /**
@@ -14,7 +15,7 @@ import "./app.css";
 const LoginLazyComponent = loadable(() => import('./containers/loginContainer'));
 const HomeLazyComponent = loadable(() => import('./containers/homeContainer'));
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
     <BrowserRouter>
