@@ -8,6 +8,7 @@ This repo contains samples that demonstrate configuring PreEmptive Protection JS
     - [self-defending](features/self-defending): Self-defending protection (with code tampering detection)
 - [Webpack](Webpack): demonstrates how you can use the JSDefender Webpack plugin to protect code that builds with Webpack4.
 - [Rollup](Rollup): demonstrates how you can use the JSDefender Rollup plugin to protect code that builds with Rollup v2.
+- [Electron](Electron): demonstrates how you can use the JSDefender Webpack plugin to protect Electron projects.
 
 ## Prerequisites
 

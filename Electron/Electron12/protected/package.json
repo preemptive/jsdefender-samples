@@ -22,24 +22,19 @@
       "packagerConfig": {},
       "makers": [
         {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "preemptive_electron_sample_app"
-          }
+          "name": "@electron-forge/maker-squirrel"
         },
         {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
+          "name": "@electron-forge/maker-deb"
         },
         {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
+          "name": "@electron-forge/maker-rpm"
         },
         {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
+          "name": "@electron-forge/maker-dmg"
+        },
+        {
+          "name": "@electron-forge/maker-zip"
         }
       ],
       "plugins": [
@@ -67,6 +62,7 @@
     "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "@electron-forge/cli": "~6.0.0-beta.54",
     "@electron-forge/maker-deb": "~6.0.0-beta.54",
+    "@electron-forge/maker-dmg": "~6.0.0-beta.54",
     "@electron-forge/maker-rpm": "~6.0.0-beta.54",
     "@electron-forge/maker-squirrel": "~6.0.0-beta.54",
     "@electron-forge/maker-zip": "~6.0.0-beta.54",

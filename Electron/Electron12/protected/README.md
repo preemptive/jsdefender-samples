@@ -27,7 +27,7 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Commands
 1. `npm start` to run the build in Dev mode.
-2. `npm run package` to create a build for the target OS. Please note you normally can only target platform X from platform X.
+2. `npm run make` to build the app in prod mode and create the installers for the platforms specified in `package.json`. Please note you normally can only target the platform that you run the command from.
 
 ## How It Works
 
