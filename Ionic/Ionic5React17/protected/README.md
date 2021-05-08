@@ -24,8 +24,6 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
     ```
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
-
-
 5. Run the `npm install` command
 
 ## Commands
