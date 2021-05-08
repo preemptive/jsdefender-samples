@@ -11,6 +11,7 @@ This repo contains samples that demonstrate configuring PreEmptive Protection JS
 - [React](React): demonstrates how you can use the JSDefender Webpack plugin to protect React projects.
 - [Vue](Vue): demonstrates how you can use the JSDefender Webpack plugin to protect Vue projects.
 - [Electron](Electron): demonstrates how you can use the JSDefender Webpack plugin to protect Electron projects.
+- [Ionic](Ionic/Ionic5React17): demonstrates how you can use the JSDefender Webpack plugin to protect Ionic React projects.
 
 ## Prerequisites
 
