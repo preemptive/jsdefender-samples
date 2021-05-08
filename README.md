@@ -9,6 +9,7 @@ This repo contains samples that demonstrate configuring PreEmptive Protection JS
 - [Webpack](Webpack): demonstrates how you can use the JSDefender Webpack plugin to protect code that builds with Webpack4.
 - [Rollup](Rollup): demonstrates how you can use the JSDefender Rollup plugin to protect code that builds with Rollup v2.
 - [React](React): demonstrates how you can use the JSDefender Webpack plugin to protect React projects.
+- [Vue](Vue): demonstrates how you can use the JSDefender Webpack plugin to protect Vue projects.
 
 ## Prerequisites
 
