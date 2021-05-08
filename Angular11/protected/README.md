@@ -1,7 +1,7 @@
 # JSDefender Angular sample application
 
 ## Project Info
-This is a sample Angular app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Angular 11.
+This is a sample Angular app where [JSDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Angular 11.
 
 ## About the BackEnd
 This is a Login-based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, the dashboard displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
@@ -33,8 +33,8 @@ DOB: `19BBY`
 5. Run the `npm install` command
 
 ## Commands
-1. `ng build` to run the build in Dev mode. `ng serve` to run the app in Dev mode.
-2. `ng build --prod` to run the build in Prod mode. `ng serve --prod` to run the app in Prod mode.
+1. `npm run build` to run the build in Dev mode. `npm start` to run the app in Dev mode.
+2. `npm run build --prod` to run the build in Prod mode. `npm start --prod` to run the app in Prod mode.
 
 ## How It Works
 
@@ -73,3 +73,6 @@ Info: Highest ES version: ES2017
 
 ### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to `true`, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as `false`. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+
+### **excludeChunks**
+We excluded the Angular runtime chunks namely `polyfills`, `polyfills-es5`, `runtime`, `styles` and the `vendor` chunk by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
