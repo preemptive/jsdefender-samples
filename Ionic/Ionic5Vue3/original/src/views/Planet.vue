@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>Planet</ion-title>
+        <ion-title>Planets</ion-title>
       </ion-toolbar>
     </ion-header>
     
