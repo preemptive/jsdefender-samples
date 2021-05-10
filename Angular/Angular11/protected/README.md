@@ -34,7 +34,7 @@ DOB: `19BBY`
 
 ## Commands
 1. `npm run build` to run the build in Dev mode. `npm start` to run the app in Dev mode.
-2. `npm run build --prod` to run the build in Prod mode. `npm start --prod` to run the app in Prod mode.
+2. `npm run build -- --prod` to run the build in Prod mode. `npm start -- --prod` to run the app in Prod mode.
 
 ## How It Works
 
