@@ -8,8 +8,9 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Prerequisites
 1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
-2. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
-3. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
+2. [Ionic cli](https://ionicframework.com/docs/cli) installed.
+3. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
+4. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
 
 ## Setting up the JSDefender Toolset
 1. If you have not done yet, download [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) to your machine.
@@ -24,12 +25,15 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
 5. Run the `npm install` command
+6. Run the `npm run build:prod` command.
+7. Run the `npx cap sync android` command for running Android build.
+8. Run the `npx cap sync ios` command for running Android build.
 
 ## Commands
-1. `npm run serve` to run the build in Dev mode.
-2. `npm run build` to run the build in Prod mode.
-3. `npm run build:android` to run the build for Android.
-4. `npm run build:ios` to run the build for iOS.
+1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
+2. `npm run start:browser:prod` to run the app in Prod mode in the browser.
+3. `npm run start:android` to run the app for Android.
+4. `npm run start:ios` to run the app for iOS.
 
 ## How It Works
 This project uses the `JSDefenderWebpackPlugin` that invokes JSDefender as the last step of the build process. The sample uses this `vue.config.js` file:
@@ -47,7 +51,7 @@ module.exports = {
         configurationFile: "./jsdefender.config.json",
         quietMode: false,
         enableInDevelopmentMode: false,
-        excludeChunks: [ 'chunk-vendors' ]
+        excludeChunks: [ "chunk-vendors", "polyfills-core-js", "polyfills-dom" ]
       })
     ]
   }
@@ -83,4 +87,4 @@ The `enableInDevelopmentMode` option of the plugin should be turned off by setti
 This option is turned off by default, here we set it to `false` explicitly just to showcase it, feel free to fully omit that line in your configuration.
 
 ### **excludeChunks**
-We excluded the vendor chunk called `chunk-vendors` by providing it to the `excludeChunks` array. As a best practice, most of the time vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude vendor chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
+We excluded the vendor chunks called `chunk-vendors`, `polyfills-core-js`, `polyfills-dom` by providing these to the `excludeChunks` array. As a best practice, most of the time vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude vendor chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.

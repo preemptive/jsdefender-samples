@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:prod": "vue-cli-service build",
+    "start:browser:dev": "vue-cli-service serve",
+    "start:browser:prod": "vue-cli-service build && serve -s dist",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "build:android": "ionic capacitor run android --livereload --external --address=0.0.0.0",
-    "build:ios": "ionic capacitor run ios --livereload --external --address=0.0.0.0"
+    "start:android": "npm run build:prod && ionic capacitor run android --livereload --external --address=0.0.0.0",
+    "start:ios": "npm run build:prod && ionic capacitor run ios --livereload --external --address=0.0.0.0"
   },
   "dependencies": {
     "@capacitor/android": "~2.4.7",
@@ -19,6 +20,7 @@
     "@ionic/vue-router": "~5.4.0",
     "axios": "~0.21.1",
     "core-js": "~3.6.5",
+    "serve": "~11.3.2",
     "vue": "~3.0.0-0",
     "vue-router": "~4.0.0-0"
   },

@@ -9,7 +9,7 @@ module.exports = {
         configurationFile: "./jsdefender.config.json",
         quietMode: false,
         enableInDevelopmentMode: false,
-        excludeChunks: [ 'chunk-vendors' ]
+        excludeChunks: [ "chunk-vendors", "polyfills-core-js", "polyfills-dom" ]
       })
     ]
   }
