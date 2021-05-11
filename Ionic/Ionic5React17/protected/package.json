@@ -41,12 +41,13 @@
     "workbox-streams": "~5.1.4"
   },
   "scripts": {
+    "build:prod": "react-app-rewired build",
     "start:browser:dev": "react-app-rewired start",
     "start:browser:prod": "react-app-rewired build && serve -s build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "build:android": "ionic capacitor run android --livereload --external --address=0.0.0.0",
-    "build:ios": "ionic capacitor run ios --livereload --external --address=0.0.0.0"
+    "start:android": "npm run build:prod && ionic capacitor run android --livereload --external --address=0.0.0.0",
+    "start:ios": "npm run build:prod && ionic capacitor run ios --livereload --external --address=0.0.0.0"
   },
   "eslintConfig": {
     "extends": [

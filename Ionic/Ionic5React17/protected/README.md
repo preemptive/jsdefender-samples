@@ -26,14 +26,15 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
 5. Run the `npm install` command.
+6. Run the `npm run build:prod` command.
 6. Run the `npx cap sync android` command for running Android build.
 7. Run the `npx cap sync ios` command for running Android build.
 
 ## Commands
 1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
 2. `npm run start:browser:prod` to run the app in Prod mode in the browser.
-3. `npm run build:android` to run the build for Android.
-4. `npm run build:ios` to run the build for iOS.
+3. `npm run start:android` to run the app for Android.
+4. `npm run start:ios` to run the app for iOS.
 
 ## How It Works
 
@@ -84,4 +85,4 @@ Info: File #4 is recognized as 'webpack4-bundle/prod' with 0 module.
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to [user guid](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
 
 ### **excludeChunks**
-We excluded the React runtime chunk called `runtime-main` and the vendor chunk called `vendors-main` by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
+We excluded the React runtime chunk called runtime-main and the vendor chunks called `vendors~main`, `vendors~polyfills-core-js`, `vendors~polyfills-dom` by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
