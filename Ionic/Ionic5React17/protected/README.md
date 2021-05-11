@@ -24,11 +24,13 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
     ```
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
-5. Run the `npm install` command
+5. Run the `npm install` command.
+6. Run the `npx cap sync android` command for running Android build.
+7. Run the `npx cap sync ios` command for running Android build.
 
 ## Commands
-1. `npm run start:dev` to run the build in Dev mode.
-2. `npm run start:prod` to build in Prod mode.
+1. `npm run start:browser:dev` to run the build in Dev mode.
+2. `npm run start:browser:prod` to build in Prod mode.
 3. `npm run build:android` to run the build for Android.
 4. `npm run build:ios` to run the build for iOS.
 
@@ -48,7 +50,7 @@ module.exports = function override(config, env) {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
-      excludeChunks: ["runtime-main", "vendors-main"]
+      excludeChunks: ["runtime-main", "vendors-main", "vendors-polyfills-core-js", "vendors-polyfills-dom"]
     })
   );
 };

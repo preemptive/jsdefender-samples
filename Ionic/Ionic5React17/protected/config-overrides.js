@@ -12,7 +12,7 @@ module.exports = function override(config, env) {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
-      excludeChunks: ["runtime-main", "vendors-main"]
+      excludeChunks: ["runtime-main", "vendors-main", "vendors-polyfills-core-js", "vendors-polyfills-dom"]
     })
   );
 
