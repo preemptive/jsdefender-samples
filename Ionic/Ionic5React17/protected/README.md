@@ -8,8 +8,9 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Prerequisites
 1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
-2. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
-3. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
+2. [Ionic cli](https://ionicframework.com/docs/cli) installed.
+3. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
+4. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
 
 ## Setting up the JSDefender Toolset
 
@@ -29,8 +30,8 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 7. Run the `npx cap sync ios` command for running Android build.
 
 ## Commands
-1. `npm run start:browser:dev` to run the build in Dev mode.
-2. `npm run start:browser:prod` to build in Prod mode.
+1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
+2. `npm run start:browser:prod` to run the app in Prod mode in the browser.
 3. `npm run build:android` to run the build for Android.
 4. `npm run build:ios` to run the build for iOS.
 
@@ -50,7 +51,7 @@ module.exports = function override(config, env) {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
-      excludeChunks: ["runtime-main", "vendors-main", "vendors-polyfills-core-js", "vendors-polyfills-dom"]
+      excludeChunks: ["runtime-main", "vendors~main", "vendors~polyfills-core-js", "vendors~polyfills-dom"]
     })
   );
 };

@@ -41,8 +41,8 @@
     "workbox-streams": "~5.1.4"
   },
   "scripts": {
-    "start:dev": "react-app-rewired start",
-    "start:prod": "react-app-rewired build && serve -s build",
+    "start:browser:dev": "react-app-rewired start",
+    "start:browser:prod": "react-app-rewired build && serve -s build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "build:android": "ionic capacitor run android --livereload --external --address=0.0.0.0",
