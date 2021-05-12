@@ -5,12 +5,12 @@
   "scripts": {
     "build:prod": "vue-cli-service build",
     "start:browser:dev": "vue-cli-service serve",
-    "start:browser:prod": "vue-cli-service build && serve -s dist",
+    "start:browser:prod": "npm run build:prod && serve -s dist",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "start:android": "npm run build:prod && ionic capacitor run android --livereload --external --address=0.0.0.0",
-    "start:ios": "npm run build:prod && ionic capacitor run ios --livereload --external --address=0.0.0.0"
+    "start:android": "npm run build:prod && npx cap sync android && ionic capacitor run android --livereload --external --address=0.0.0.0",
+    "start:ios": "npm run build:prod && npx cap sync ios && ionic capacitor run ios --livereload --external --address=0.0.0.0"
   },
   "dependencies": {
     "@capacitor/android": "~2.4.7",
