@@ -1,0 +1,35 @@
+<div *ngIf="loader">
+    <div class="loader"></div>
+    <div id="overlay"></div>
+  </div>
+  
+<div class="container">
+  <div class="row center yellow">
+    <h1 class="jumbo">SWAPI</h1>
+    <p class="lead">The Star Wars API</p>
+  </div>
+  <div class="row">
+    <div class="offset-md-4 col-md-4 col-xs-12 form-box">
+      <div class="divForm">
+        <form (ngSubmit)="onSubmit()" class="loginForm" ngNativeValidate>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input [(ngModel)]="user.username" required name="username" type="username" class="form-control"
+              id="username" placeholder="Enter your Username">
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input [(ngModel)]="user.dob" required name="dob" type="text" class="form-control" id="dob"
+              placeholder="Enter your DOB">
+          </div>
+          <div class="form-group" *ngIf="errorMessage">
+            <div class="danger" role="alert">
+              {{errorMessage}}
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
