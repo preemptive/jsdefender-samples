@@ -26,9 +26,6 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
 5. Run the `npm install` command.
-6. Run the `npm run build:prod` command.
-7. Run the `npx cap sync android` command for running Android build.
-8. Run the `npx cap sync ios` command for running Android build.
 
 ## Commands
 1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
