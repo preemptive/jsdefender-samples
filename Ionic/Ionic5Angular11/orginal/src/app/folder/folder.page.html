@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Planets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="loader">
+    <div class="loader"></div>
+    <div id="overlay"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let item of planets">
+          <div class="response">
+            <p class="card-title">{{item.name}}</p>
+            <table class="table table-borderless table-responsive">
+              <tbody>
+                <tr class="card-heading-1">
+                  <td>Rotation period</td>
+                  <td>Orbital period</td>
+                  <td>Diameter</td>
+                  <td>Climate</td>
+                  <td>Gravity</td>
+                  <td>Population</td>
+                </tr>
+                <tr class="card-heading-2">
+                  <td>{{item.rotation_period}}</td>
+                  <td>{{item.orbital_period}}</td>
+                  <td>{{item.diameter}}</td>
+                  <td>{{item.climate}}</td>
+                  <td>{{item.gravity}}</td>
+                  <td>{{item.population}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
