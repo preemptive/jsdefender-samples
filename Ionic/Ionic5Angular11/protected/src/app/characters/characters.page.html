@@ -16,33 +16,31 @@
     <div id="overlay"></div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngFor="let item of peoples">
-          <div class="response">
-            <p class="card-title">{{item.name}}</p>
-            <table class="table table-borderless table-responsive">
-              <tbody>
-                <tr class="card-heading-1">
-                  <td>Height</td>
-                  <td>Mass</td>
-                  <td>Hair color</td>
-                  <td>Skin color</td>
-                  <td>Birth year</td>
-                  <td>Gender</td>
-                </tr>
-                <tr class="card-heading-2">
-                  <td>{{item.height}}</td>
-                  <td>{{item.mass}}</td>
-                  <td>{{item.hair_color}}</td>
-                  <td>{{item.skin_color}}</td>
-                  <td>{{item.birth_year}}</td>
-                  <td>{{item.gender}}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let item of peoples">
+        <div class="response">
+          <p class="card-title">{{item.name}}</p>
+          <table class="table table-borderless table-responsive">
+            <tbody>
+              <tr class="card-heading-1">
+                <td>Height</td>
+                <td>Mass</td>
+                <td>Hair color</td>
+                <td>Skin color</td>
+                <td>Birth year</td>
+                <td>Gender</td>
+              </tr>
+              <tr class="card-heading-2">
+                <td>{{item.height}}</td>
+                <td>{{item.mass}}</td>
+                <td>{{item.hair_color}}</td>
+                <td>{{item.skin_color}}</td>
+                <td>{{item.birth_year}}</td>
+                <td>{{item.gender}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

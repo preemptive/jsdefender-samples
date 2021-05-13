@@ -15,46 +15,29 @@
     <div class="loader"></div>
     <div id="overlay"></div>
   </div>
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngFor="let item of movies">
-              <div class="response">
-                <p class="card-title">{{item.name}}</p>
-                <table class="table table-borderless table-responsive">
-                  <tbody>
-                    <tr class="card-heading-1">
-                      <td>Title</td>
-                      <td>Director</td>
-                      <td>Producer</td>
-                      <td>Release date</td>
-                    </tr>
-                    <tr class="card-heading-2">
-                      <td>{{item.title}}</td>
-                      <td>{{item.director}}</td>
-                      <td>{{item.producer}}</td>
-                      <td>{{item.release_date}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngFor="let item of planets">
-          <div class="response">
-            <p>Planet Name: {{item.name}}</p>
-            <p>Rotation period: {{item.rotation_period}}, Orbital period: {{item.orbital_period}}, Diameter: {{item.diameter}}</p>
-            <p>Climate: {{item.climate}}, Gravity: {{item.gravity}}, Terrain: {{item.terrain}}</p>
-            <p>Surface water: {{item.surface_water}}, Population: {{item.population}}</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngFor="let item of movies">
+        <div class="response">
+          <p class="card-title">{{item.name}}</p>
+          <table class="table table-borderless table-responsive">
+            <tbody>
+              <tr class="card-heading-1">
+                <td>Title</td>
+                <td>Director</td>
+                <td>Producer</td>
+                <td>Release date</td>
+              </tr>
+              <tr class="card-heading-2">
+                <td>{{item.title}}</td>
+                <td>{{item.director}}</td>
+                <td>{{item.producer}}</td>
+                <td>{{item.release_date}}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
       </div>
     </div>
   </div>
