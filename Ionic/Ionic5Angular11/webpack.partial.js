@@ -6,6 +6,7 @@ module.exports = {
             configurationFile: "./jsdefender.config.json",
             quietMode: false,
             enableInDevelopmentMode: true,
+            excludeChunks: ["runtime-main", "vendors~main", "vendors~polyfills-core-js", "vendors~polyfills-dom"],
         })
   ]
 }

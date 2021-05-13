@@ -1,7 +1,7 @@
-# PreEmptive Ionic Angular sample app
+# JSDefender Ionic Angular sample application
 
 ## Project Info
-This is a sample Ionic Angular app where [JsDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Ionic 5 Angular 11.
+This is a sample Ionic Angular app where [JSDefender](https://www.preemptive.com/products/jsdefender) is pre-configured and working with Ionic 5 Angular 11.
 
 ## About the BackEnd
 This project displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API upon landing the app. SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
@@ -18,9 +18,9 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Set the `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
     ```
-    E.g. C3B940E5A00D492AAB45DD28091E9C53
+    E.g. <your_license_key>
 
-    With email: C3B940E5A00D492AAB45DD28091E9C53:my_email@test.com
+    With email: <your_license_key>:my_email@test.com
     ```
 
     For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
@@ -28,10 +28,10 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 5. Run the `npm install` command
 
 ## Commands
-1. `ng serve` to run the build in Dev mode.
-2. `ng serve --prod` to build in Prod mode.
-3. `npm run build:android` to run the build for Android.
-4. `npm run build:ios` to run the build for iOS.
+1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
+2. `npm run start:browser:prod`  to run the app in Prod mode in the browser.
+3. `npm run start:android` to run the build for Android.
+4. `npm run start:ios ` to run the build for iOS.
 
 ## How It Works
 
@@ -47,6 +47,7 @@ module.exports = {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
+      excludeChunks: ["runtime-main", "vendors~main", "vendors~polyfills-core-js", "vendors~polyfills-dom"],
     })
   ]
 }
@@ -64,22 +65,21 @@ Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 3, name: main
 
 ...
-This software may not be used on binaries for general release.Distinct License Users: 1/3; Concurrent Build Limit: 3
-Info: JSDefender is up to date.
-Info: Source tree building in progress...
-Info: File #2 is recognized as 'webpack4-bundle/prod' with 0 module.
-Info: File #3 is recognized as 'webpack4-chunk/dev' with 1 module.
-Info: File #12 is recognized as 'webpack4-chunk/dev' with 1 module.
-Info: File #19 is recognized as 'webpack4-chunk/dev' with 1 module.
-Info: File #21 is recognized as 'webpack4-chunk/dev' with 1 module.
-Info: File #23 is recognized as 'webpack4-chunk/dev' with 1 module.
-
+JSDefenderWebpackPlugin: Preemptive Protection JSDefender(TM) (v2.3.0)
+Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
+[Info] JSDefenderWebpackPlugin: Use of this software constitutes acceptance of the accompanying license agreement.
 ...
-[Info] JSDefenderWebpackPlugin: All chunks are protected successfully.
-[Info] JSDefenderWebpackPlugin: Execution time: 25s 58ms
+Info: Source tree successfully built.
+Info: Total length: 3516651
+Info: #of scripts: 6
+Info: #of syntax nodes: 287400
+Info: Highest ES version: ES2017
 
 (other messages omitted for the sake of brevity)
 ```
 ### **enableInDevelopmentMode**
 
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+
+### **excludeChunks**
+We excluded the Angular runtime chunks namely `polyfills`, `polyfills-es5`, `runtime`, `styles` and the `vendor` chunk by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.

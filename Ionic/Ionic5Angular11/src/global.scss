@@ -24,3 +24,154 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.container {
+    padding: 0px !important;
+  }
+  
+  .col-md-12 {
+    padding: 0px !important;
+    background: #f5f5f5;
+  }
+  
+  .container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  .container a {
+    text-decoration: none;
+  }
+  
+  .loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: 40px 0 0 -30px;
+    border: 7px solid #f3f3f3;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+            border-radius: 50px;
+    border-top: 7px solid #000;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+    }
+    100% {
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-bottom {
+    position: relative;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from {
+      bottom: -100px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes animatebottom {
+    from {
+      bottom: -100px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  
+  .response {
+    background-color: white;
+    margin: 5px 3px;
+    padding: 10px;
+    height: auto;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .row {
+    margin: 0 !important;
+  }
+  
+  #overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .card-title {
+    padding: 0px 20px;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  table {
+    margin: 0px !important;
+  }
+  
+  .table-bold-content {
+    font-weight: 600;
+  }
+  
+  .card-heading-1 {
+    font-size: 14px;
+  }
+  
+  .card-heading-1 > td {
+    padding: 0px 20px !important;
+    min-width: 150px;
+    max-width: 150px;
+  }
+  
+  .card-heading-2, .title-default {
+    font-weight: 600;
+  }
+  
+  .card-heading-2 > td {
+    padding: 0px 20px !important;
+    min-width: 150px;
+    max-width: 150px;
+  }

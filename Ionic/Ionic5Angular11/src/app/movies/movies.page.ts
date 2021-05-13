@@ -5,11 +5,11 @@ import { HttpClient } from '@angular/common/http';
 import { ItemsService } from '../items.service';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-movies',
+  templateUrl: './movies.page.html',
+  styleUrls: ['./movies.page.scss'],
 })
-export class FolderPage implements OnInit {
+export class MoviesPage implements OnInit {
 
   public folder: string;
   items: Observable<any>;
@@ -24,7 +24,7 @@ export class FolderPage implements OnInit {
   }
   getPlanets() {
 
-    this.callAPI.callApiPlanets().subscribe(
+    this.callAPI.callApiFilms().subscribe(
       data => {
         console.log('data', data);
         this.planets = data.results;
