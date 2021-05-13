@@ -1,0 +1,7 @@
+{
+  "name": "preemptive-ionic-vue-sample-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
