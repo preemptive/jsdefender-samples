@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ItemsService } from '../items.service';
 
@@ -16,16 +15,17 @@ export class CharactersPage implements OnInit {
   loader: any;
 
   constructor(public callAPI: ItemsService, private activatedRoute: ActivatedRoute, public httpClient: HttpClient) {
-    this.getPlanets();
+    this.getPeople();
   }
 
   ngOnInit() {
   }
-  getPlanets() {
-
+  getPeople() {
+    this.loader = true;
     this.callAPI.callApiPeople().subscribe(
       data => {
         this.peoples = data.results;
+        this.loader = false;
       },
       err => console.log(err)
     );

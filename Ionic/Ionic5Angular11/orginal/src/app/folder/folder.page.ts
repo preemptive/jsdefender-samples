@@ -12,10 +12,9 @@ import { ItemsService } from '../items.service';
 export class FolderPage implements OnInit {
 
   public folder: string;
-  items: Observable<any>;
   planets: any;
   loader: any;
-  name: any;
+
   constructor(public callAPI: ItemsService, private activatedRoute: ActivatedRoute, public httpClient: HttpClient) {
     this.getPlanets();
   }
@@ -23,10 +22,11 @@ export class FolderPage implements OnInit {
   ngOnInit() {
   }
   getPlanets() {
-
+    this.loader = true;
     this.callAPI.callApiPlanets().subscribe(
       data => {
         this.planets = data.results;
+        this.loader = false;
       },
       err => console.log(err)
     );

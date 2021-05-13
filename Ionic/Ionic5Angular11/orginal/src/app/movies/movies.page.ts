@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ItemsService } from '../items.service';
 
@@ -16,16 +15,17 @@ export class MoviesPage implements OnInit {
   loader: any;
 
   constructor(public callAPI: ItemsService, private activatedRoute: ActivatedRoute, public httpClient: HttpClient) {
-    this.getPlanets();
+    this.getMovies();
   }
 
   ngOnInit() {
   }
-  getPlanets() {
-
+  getMovies() {
+    this.loader = true;
     this.callAPI.callApiFilms().subscribe(
       data => {
         this.movies = data.results;
+        this.loader = false;
       },
       err => console.log(err)
     );
