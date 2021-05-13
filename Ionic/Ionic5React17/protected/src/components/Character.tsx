@@ -66,39 +66,37 @@ class Character extends Component<{}, MyState> {
     }
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            {this.state.result.map((item: any, i: any) => {
-                return(
-                  <div className="response" key={i}>
-                    <p className="card-title">{item.name}</p>
-                    <table className="table table-borderless table-responsive">
-                      <tbody>
-                        <tr className="card-heading-1">
-                          <td>Height</td>
-                          <td>Mass</td>
-                          <td>Hair color</td>
-                          <td>Skin color</td>
-                          <td>Birth year</td>
-                          <td>Gender</td>
-                        </tr>
-                        <tr className="card-heading-2">
-                          <td>{item.height}</td>
-                          <td>{item.mass}</td>
-                          <td>{item.hair_color}</td>
-                          <td>{item.skin_color}</td>
-                          <td>{item.birth_year}</td>
-                          <td>{item.gender}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                );
-            })}
-          </div>
-          {loader}
+      <div className="row">
+        <div className="col-md-12">
+          {this.state.result.map((item: any, i: any) => {
+              return(
+                <div className="response" key={i}>
+                  <p className="card-title">{item.name}</p>
+                  <table className="table table-borderless table-responsive">
+                    <tbody>
+                      <tr className="card-heading-1">
+                        <td>Height</td>
+                        <td>Mass</td>
+                        <td>Hair color</td>
+                        <td>Skin color</td>
+                        <td>Birth year</td>
+                        <td>Gender</td>
+                      </tr>
+                      <tr className="card-heading-2">
+                        <td>{item.height}</td>
+                        <td>{item.mass}</td>
+                        <td>{item.hair_color}</td>
+                        <td>{item.skin_color}</td>
+                        <td>{item.birth_year}</td>
+                        <td>{item.gender}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              );
+          })}
         </div>
+        {loader}
       </div>
     );
   }

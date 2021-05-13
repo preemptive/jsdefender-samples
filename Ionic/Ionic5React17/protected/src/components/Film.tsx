@@ -66,35 +66,33 @@ class Film extends Component<{}, MyState> {
     }
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            {this.state.result.map((item: any, i: any) => {
-                return(
-                  <div className="response" key={i}>
-                    <p className="card-title">{item.name}</p>
-                    <table className="table table-borderless table-responsive">
-                      <tbody>
-                        <tr className="card-heading-1">
-                          <td>Title</td>
-                          <td>Director</td>
-                          <td>Producer</td>
-                          <td>Release date</td>
-                        </tr>
-                        <tr className="card-heading-2">
-                          <td>{item.title}</td>
-                          <td>{item.director}</td>
-                          <td>{item.producer}</td>
-                          <td>{item.release_date}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                );
-            })}
-          </div>
-          {loader}
+      <div className="row">
+        <div className="col-md-12">
+          {this.state.result.map((item: any, i: any) => {
+              return(
+                <div className="response" key={i}>
+                  <p className="card-title">{item.name}</p>
+                  <table className="table table-borderless table-responsive">
+                    <tbody>
+                      <tr className="card-heading-1">
+                        <td>Title</td>
+                        <td>Director</td>
+                        <td>Producer</td>
+                        <td>Release date</td>
+                      </tr>
+                      <tr className="card-heading-2">
+                        <td>{item.title}</td>
+                        <td>{item.director}</td>
+                        <td>{item.producer}</td>
+                        <td>{item.release_date}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              );
+          })}
         </div>
+        {loader}
       </div>
     );
   }
