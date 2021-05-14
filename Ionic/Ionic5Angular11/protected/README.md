@@ -47,7 +47,7 @@ module.exports = {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
-      excludeChunks: ["polyfills", "polyfills-es5", "runtime", "styles", "vendor"],
+      excludeChunks: ["common", "polyfills", "polyfills-core-js", "polyfills-css-shim", "polyfills-dom", "polyfills-es5", "runtime", "styles", "vendor"]
     })
   ]
 }
@@ -81,4 +81,4 @@ Info: Highest ES version: ES2017
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
 
 ### **excludeChunks**
-We excluded the Angular runtime chunks namely `polyfills`, `polyfills-es5`, `runtime`, `styles` and the `vendor` chunk by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.
+We excluded the Angular runtime chunks namely `common`, `polyfills`, `polyfills-core-js`, `polyfills-css-shim`, `polyfills-dom`, `polyfills-es5`, `runtime`, `styles`, and the `vendor` chunk by providing those to the `excludeChunks` array. As a best practice, most of the time framework related and vendor chunks should not be protected because those type of chunks contain only 3rd party code. We recommend to exclude these chunks mostly because of performance reasons, but sometimes these contain code which cannot be correctly protected by JSDefender.

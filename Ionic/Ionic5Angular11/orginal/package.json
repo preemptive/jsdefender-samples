@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build",
+    "build:prod": "ng build --prod",
     "start:browser:dev": "ng serve",
-    "start:browser:prod": "npm run build:prod && serve -s www",
+    "start:browser:prod": "npm run start:browser:dev -- --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

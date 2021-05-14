@@ -6,7 +6,7 @@ module.exports = {
       configurationFile: "./jsdefender.config.json",
       quietMode: false,
       enableInDevelopmentMode: true,
-      excludeChunks: ["polyfills", "polyfills-es5", "runtime", "styles", "vendor"],
+      excludeChunks: ["common", "polyfills", "polyfills-core-js", "polyfills-css-shim", "polyfills-dom", "polyfills-es5", "runtime", "styles", "vendor"]
     })
   ]
 }
