@@ -8,11 +8,11 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 
 ## Prerequisites
 1. [Npm](https://nodejs.org/en/download/) installed. JSDefender requires Node.js version 7.10.1 or higher.
-2. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
-3. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
+2. [Ionic cli](https://ionicframework.com/docs/cli) installed.
+3. For building Android app, [Android Studio](https://developer.android.com/studio) installed.
+4. For building an iOS app, [Xcode](https://developer.apple.com/xcode/) installed.
 
 ## Setting up the JSDefender Toolset
-
 1. If you have not done yet, install [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) on your machine.
 2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
@@ -28,14 +28,14 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 5. Run the `npm install` command
 
 ## Commands
-1. `start:browser:dev` to run the app in Dev mode in the browser.
-2. `npm run build:prod`  to run the app in Prod mode in the browser.
+1. `npm run start:browser:dev` to run the app in Dev mode in the browser.
+2. `npm run start:browser:prod`  to run the app in Prod mode in the browser.
 3. `npm run start:android` to run the build for Android.
-4. `npm run start:ios ` to run the build for iOS.
+4. `npm run start:ios` to run the build for iOS.
 
 ## How It Works
 
-This project uses the JSDefenderWebpackPlugin that invokes JSDefender as the last step of the build process. The sample uses @angular-builders/custom-webpack which overrides webpack configuration using webpack.partial.js file:
+This project uses the JSDefenderWebpackPlugin that invokes JSDefender as the last step of the build process. The sample uses `@angular-builders/custom-webpack` which overrides webpack configuration using webpack.partial.js file:
 
 ```javascript
 const { JSDefenderWebpackPlugin } = require('@preemptive/jsdefender-webpack-plugin');
@@ -63,7 +63,6 @@ Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 1, name: runtime (runtime)
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 2, name: null
 [Info] JSDefenderWebpackPlugin: Processing chunk id: 3, name: main
-
 ...
 JSDefenderWebpackPlugin: Preemptive Protection JSDefender(TM) (v2.3.0)
 Copyright 2019-2021 PreEmptive Solutions, LLC. All Rights Reserved
@@ -77,8 +76,8 @@ Info: Highest ES version: ES2017
 
 (other messages omitted for the sake of brevity)
 ```
-### **enableInDevelopmentMode**
 
+### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
 
 ### **excludeChunks**
