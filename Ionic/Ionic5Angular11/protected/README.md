@@ -28,8 +28,8 @@ This project displays a list of planets using [SWAPI planets](https://swapi.dev/
 5. Run the `npm install` command
 
 ## Commands
-1. `npm run build` to run the build in Dev mode. `npm start` to run the app in Dev mode.
-2. `npm run build -- --prod` to run the build in Prod mode. `npm start -- --prod` to run the app in Prod mode.
+1. `start:browser:dev` to run the app in Dev mode in the browser.
+2. `npm run build:prod`  to run the app in Prod mode in the browser.
 3. `npm run start:android` to run the build for Android.
 4. `npm run start:ios ` to run the build for iOS.
 

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -14,7 +13,6 @@ export class ItemsService {
   callApiPlanets() {
     const url = ItemsService.apiURL + 'planets/?page=1';
     return this.httpClient.get(url).pipe(map((res: any) => {
-      console.log('res', res);
       return res;
     }));
   }
@@ -22,7 +20,6 @@ export class ItemsService {
   callApiFilms() {
     const url = ItemsService.apiURL + 'films/?page=1';
     return this.httpClient.get(url).pipe(map((res: any) => {
-      console.log('res', res);
       return res;
     }));
   }
@@ -30,7 +27,6 @@ export class ItemsService {
   callApiPeople() {
     const url = ItemsService.apiURL + 'people/?page=1';
     return this.httpClient.get(url).pipe(map((res: any) => {
-      console.log('res', res);
       return res;
     }));
   }
