@@ -1,0 +1,29 @@
+{
+  "name": "preemptive-vanilla-js-sample-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "serve": "~12.0.1",
+    "web-vitals": "~2.1.0"
+  },
+  "scripts": {
+    "start-unix": "./build.sh && npx http-server build/src",
+    "start-windows": "build.cmd && npx http-server build\\src"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-cli": "file:assets/preemptive-jsdefender-cli-{version}.tgz"
+  }
+}
