@@ -13,6 +13,8 @@ This repo contains samples that demonstrate configuring PreEmptive Protection JS
 - [Electron](Electron): demonstrates how you can use the JSDefender Webpack plugin to protect Electron projects.
 - [Angular](Angular): demonstrates how you can use the JSDefender Webpack plugin to protect Angular projects.
 - [Ionic](Ionic): demonstrates how you can use the JSDefender Webpack plugin to protect different Ionic projects.
+- [CLI/Web](CLI/Web): demonstrates how you can use the JSDefender Webpack plugin to protect Vanilla JavaScript projects.
+- [ReactNative/ReacNative0.64](ReactNative/ReacNative0.64): demonstrates how you can use the JSDefender Webpack plugin to protect React Native projects.
 
 ## Prerequisites
 
