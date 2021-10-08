@@ -5,9 +5,9 @@ This is a sample Vanilla JavaScript app where [JSDefender](https://www.preemptiv
 
 ## About the BackEnd
 This is a Login-based project which is using the [Swapi People](https://swapi.dev/api/people/1) API to Authenticate. And after the successful authentication, the dashboard displays a list of planets using [SWAPI planets](https://swapi.dev/api/planets/?page=1) API.
-SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and used here for the demonstration purpose.
+SWAPI (Star Wars API) is an open-source project which provides the Star Wars Data and is used here for the demonstration purpose.
 
-**Sample credentials to login:**
+**Sample credentials to log in:**
 
 Username: `Luke Skywalker`
 
@@ -28,9 +28,9 @@ DOB: `19BBY`
     With email: <your_license_key>:my_email@test.com
     ```
 
-    For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html)
+    For more detail refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/intro_licensing.html).
 
-5. Run the `npm install` command
+5. Run the `npm install` command.
 
 ## Commands
 For deployment: `npm run start-unix` or `npm run start-windows` depending on your platform.
