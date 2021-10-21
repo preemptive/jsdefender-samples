@@ -19,7 +19,7 @@ DOB: `19BBY`
 
 ## Steps to Set up the JSDefender Toolset
 1. If you have not done yet, download [JSDefender](https://www.preemptive.com/products/jsdefender/downloads) to your machine.
-2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-webpack-plugin-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
+2. Copy the `preemptive-jsdefender-core-<version>.tgz` and `preemptive-jsdefender-cli-<version>.tgz` files from your download directory to the [`assets`](assets/) folder of this demo. Here, `<version>` represents your downloaded JSDefender version number.
 3. Replace the `{version}` placeholders within the `"devDependencies"` section in [`package.json`](package.json) based on the version of your `*.tgz` files.
 4. Set `JSDEFENDER_LICENSE` environment variable as your license with or without your email address separated by a colon.
     ```
