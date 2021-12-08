@@ -22,6 +22,9 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
+    "@preemptive/jsdefender-metro-plugin": "file:assets/preemptive-jsdefender-metro-plugin-{version}.tgz",
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",

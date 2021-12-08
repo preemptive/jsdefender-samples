@@ -3,9 +3,14 @@
     "booleanLiterals": true,
     "controlFlow": true,
     "constantArgument": true,
-    "dateLock": true,
+    "dateLock": {
+      "startDate": "2020-01-01"
+    },
     "debuggerRemoval": true,
-    "domainLock": true,
+    "domainLock": {
+      "domainPattern": "localhost",
+      "errorScript": "alert('Invalid domain!')"
+    },
     "exprSequence": true,
     "functionReorder": true,
     "integerLiterals": true,
