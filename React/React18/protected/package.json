@@ -8,18 +8,18 @@
     "@testing-library/react": "~11.1.0",
     "@testing-library/user-event": "~12.1.10",
     "axios": "~0.21.1",
-    "react": "~17.0.2",
-    "react-dom": "~17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-redux": "~7.2.3",
     "react-router-dom": "~5.2.0",
     "react-scripts": "4.0.3",
-    "serve": "~11.3.2",
+    "serve": "^14.0.1",
     "web-vitals": "~1.0.1"
   },
   "scripts": {
-    "start:dev": "react-scripts start",
-    "start:prod": "react-scripts build && serve -s build",
-    "test": "react-scripts test",
+    "start:dev": "react-app-rewired start",
+    "start:prod": "react-app-rewired build && serve -s build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,7 +41,10 @@
     ]
   },
   "devDependencies": {
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "file-loader": "~6.2.0",
+    "react-app-rewired": "~2.1.8",
     "redux-devtools-extension": "~2.13.9"
   }
 }
