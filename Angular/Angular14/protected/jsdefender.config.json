@@ -25,10 +25,8 @@
             "lower": 0,
             "upper": 65535
         },
-        "localDeclarations": {
-            "nameMangling": "base52"
-        },
-        "propertyIndirection": true,
+        "localDeclarations": false,
+        "propertyIndirection": false,
         "selfDefending": true,
         "stringLiterals": true,
         "propertySparsing": true,
