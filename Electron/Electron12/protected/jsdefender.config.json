@@ -30,7 +30,7 @@
         },
         "propertyIndirection": true,
         "selfDefending": true,
-        "stringLiterals": false,
+        "stringLiterals": true,
         "propertySparsing": true,
         "variableGrouping": true
     }
