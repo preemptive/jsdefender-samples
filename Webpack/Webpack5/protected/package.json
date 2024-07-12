@@ -1,0 +1,24 @@
+{
+  "name": "webpack-5-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:dev": "webpack"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.0.0",
+    "extract-css-chunks-webpack-plugin": "^4.7.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "@preemptive/jsdefender-core": "file:assets/jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/jsdefender-webpack-plugin-{version}.tgz"
+  }
+}
