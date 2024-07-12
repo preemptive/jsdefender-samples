@@ -1,0 +1,79 @@
+{
+  "name": "preemptive-ionic-react-sample-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@capacitor/ios": "^6.1.0",
+    "@ionic/react": "^8.0.1",
+    "@ionic/react-router": "^8.0.1",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.7.2",
+    "ionicons": "^7.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1",
+    "serve": "^14.2.3",
+    "typescript": "^5.5.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^7.1.0",
+    "workbox-broadcast-update": "^7.1.0",
+    "workbox-cacheable-response": "^7.1.0",
+    "workbox-core": "^7.1.0",
+    "workbox-expiration": "^7.1.0",
+    "workbox-google-analytics": "^7.1.0",
+    "workbox-navigation-preload": "^7.1.0",
+    "workbox-precaching": "^7.1.0",
+    "workbox-range-requests": "^7.1.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0",
+    "workbox-streams": "^7.1.0"
+  },
+  "scripts": {
+    "build:prod": "react-scripts build",
+    "start:dev": "react-scripts start",
+    "start:prod": "npm run build:prod && serve -s build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "start:android": "npm run build:prod && npx cap sync android && ionic capacitor open android",
+    "start:ios": "npm run build:prod && npx cap sync ios && ionic capacitor open ios"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.1.0",
+    "file-loader": "~6.2.0",
+    "html-webpack-plugin": "~5.6.0",
+    "react-app-rewired": "~2.2.1",
+    "webpack": "5.92.1",
+    "webpack-dev-server": "5.0.4"
+  },
+  "description": "preemptive ionic react sample app"
+}
