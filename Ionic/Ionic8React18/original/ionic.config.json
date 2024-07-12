@@ -1,0 +1,7 @@
+{
+  "name": "preemptive-ionic-react-sample-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
