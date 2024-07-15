@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "booleanLiterals": {
+      "randomize": true
+    },
+    "controlFlow": {
+      "randomize": true
+    },
+    "constantArgument": true,
+    "dateLock": {
+      "startDate": "2020-01-01"
+    },
+    "debuggerRemoval": true,
+    "domainLock": {
+      "domainPattern": "localhost",
+      "errorScript": "alert('Invalid domain!')"
+    },
+    "exprSequence": true,
+    "functionReorder": {
+      "randomize": true
+    },
+    "integerLiterals": {
+      "randomize": true,
+      "radix": "octal",
+      "lower": 0,
+      "upper": 65535
+    },
+    "localDeclarations": {
+      "nameMangling": "base52"
+    },
+    "propertyIndirection": true,
+    "selfDefending": true,
+    "stringLiterals": true,
+    "propertySparsing": true,
+    "variableGrouping": true
+  },
+  "glob": true,
+  "outDir": "build",
+  "runtimeInjection": "all",
+  "inputs": [
+    {
+      "in": "src/**/*.*",
+      "ignore": [
+        "src/**/*.html",
+        "src/**/*.css",
+        "src/**/*.svg",
+        "src/**/*.jpg",
+        "src/**/*.json"
+      ]
+    }
+  ]
+}
