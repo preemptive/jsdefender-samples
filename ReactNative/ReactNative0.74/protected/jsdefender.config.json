@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "booleanLiterals": true,
+    "controlFlow": true,
+    "constantArgument": true,
+    "dateLock": {
+      "startDate": "2020-01-01"
+    },
+    "debuggerRemoval": true,
+    "domainLock": {
+      "domainPattern": "localhost",
+      "errorScript": "alert('Invalid domain!')"
+    },
+    "exprSequence": true,
+    "functionReorder": true,
+    "integerLiterals": true,
+    "localDeclarations": true,
+    "propertyIndirection": true,
+    "selfDefending": true,
+    "stringLiterals": true,
+    "propertySparsing": true,
+    "variableGrouping": true,
+    "consoleCloaking": true
+  },
+  "ignoreUnsafeConstructs": true,
+  "runtimeInjection": {
+    "mode": "separateSource",
+    "options": "no-eval"
+  }
+  
+}
