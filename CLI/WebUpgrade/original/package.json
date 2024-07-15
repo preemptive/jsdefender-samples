@@ -22,7 +22,7 @@
     ]
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "../../../../../jsdefender-celestial-webpack-upgrade/packages/jsdefender-core",
-    "@preemptive/jsdefender-cli": "../../../../../jsdefender-celestial-webpack-upgrade/packages/jsdefender-cli"
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-cli": "file:assets/preemptive-jsdefender-cli-{version}.tgz"
   }
 }
