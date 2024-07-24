@@ -10,7 +10,7 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "start:android": "npm run build:prod && npx cap sync android && ionic capacitor open android",
-    "start:ios": "npm run build:prod && npx cap sync ios && npx cap open ios"
+    "start:ios": "ionic capacitor sync ios && npx cap open ios"
   },
   "dependencies": {
     "@capacitor/android": "~6.1.0",
