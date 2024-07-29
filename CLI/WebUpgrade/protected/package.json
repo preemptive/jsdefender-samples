@@ -7,8 +7,8 @@
     "web-vitals": "~2.1.0"
   },
   "scripts": {
-    "start-unix": "./build.sh && npx http-server build/src",
-    "start-windows": "build.cmd && npx http-server build\\src"
+    "start-unix": "./build.sh && npx http-server -a localhost -p 8000 -c-1 build/src",
+    "start-windows": "build.cmd && npx http-server -a localhost -p 8000 -c-1 build\\src"
   },
   "browserslist": {
     "production": [
