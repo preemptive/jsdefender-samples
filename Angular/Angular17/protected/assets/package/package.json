@@ -1,0 +1,67 @@
+{
+  "name": "@preemptive/jsdefender-core",
+  "version": "2.9.0-next.0",
+  "description": "PreEmptive Protection JSDefender Core",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "engines": {
+    "node": ">=14.10.1"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "ThirdPartyLicenses.txt"
+  ],
+  "keywords": [
+    "PJSD",
+    "JSDefender",
+    "JavaScript",
+    "protection"
+  ],
+  "author": "PreEmptive",
+  "license": "PreEmptive",
+  "bugs": {
+    "url": "https://www.preemptive.com/support"
+  },
+  "homepage": "https://www.preemptive.com/products/javascript-protection/overview",
+  "repository": "git://github.com/preemptive/jsdefender.git",
+  "scripts": {
+    "build:prod": "npm run build -- --mode=production",
+    "build": "npm run clean && webpack",
+    "link": "npm link --only=production",
+    "clean": "rimraf ./index.*",
+    "start": "node dist/index.js",
+    "test": "ts-mocha -p ./test/tsconfig.json ./test/**/*.test.ts",
+    "lint": "eslint . --ext .js,.ts"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.24.7",
+    "global-agent": "^3.0.0",
+    "node-fetch": "^2.6.7",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.24.7",
+    "@preemptive/jsdefender-shared": "../jsdefender-shared/dist",
+    "@preemptive/public-dts-bundle-webpack-plugin": "../../tools/public-dts-bundle-webpack-plugin",
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/expect": "^1.20.4",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^12.0.10",
+    "@types/node-fetch": "^2.5.4",
+    "@types/xml2js": "^0.4.11",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "expect": "^24.8.0",
+    "mocha": "^10.2.0",
+    "nock": "^13.0.4",
+    "node": "^20.14.0",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^9.4.3",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.0.4",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.1"
+  }
+}

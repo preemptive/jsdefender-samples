@@ -2,7 +2,7 @@ const { JSDefenderWebpackPlugin } = require('@preemptive/jsdefender-webpack-plug
 
 module.exports = {
   plugins: [
-         new JSDefenderWebpackPlugin({
+        new JSDefenderWebpackPlugin({
             configurationFile: "./jsdefender.config.json",
             quietMode: false,
             enableInDevelopmentMode: true,

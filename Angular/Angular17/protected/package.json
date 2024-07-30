@@ -44,8 +44,7 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~5.4.2",
-    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
+    
     "@angular-builders/custom-webpack": "~17.0.2",
     "postcss": "^8.4.14",
     "webpack": "^5.84.1"

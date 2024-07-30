@@ -20,9 +20,6 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "./webpack.partial.js"
-           },
             "outputPath": "dist/preemptive-angular-sample-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -46,13 +43,13 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": true,
-              "buildOptimizer": true,
+              "vendorChunk": false,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",

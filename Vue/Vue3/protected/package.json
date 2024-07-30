@@ -16,8 +16,8 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
-    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-2.9.0-next.0.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-2.9.0-next.0.tgz",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-service": "~5.0.6",

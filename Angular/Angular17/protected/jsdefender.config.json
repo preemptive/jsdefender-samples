@@ -1,35 +1,36 @@
 {
     "settings": {
         "booleanLiterals": {
-            "randomize": true
+            "randomize": false
         },
         "controlFlow": {
-            "randomize": true
+            "randomize": false
         },
-        "constantArgument": true,
+        "constantArgument": false,
         "dateLock": {
             "startDate": "2020-01-01"
         },
-        "debuggerRemoval": true,
+        "debuggerRemoval": false,
+
         "domainLock": {
             "domainPattern": "localhost",
             "errorScript": "alert('Invalid domain!')"
         },
-        "exprSequence": true,
+        "exprSequence": false,
         "functionReorder": {
-            "randomize": true
+            "randomize": false
         },
         "integerLiterals": {
-            "randomize": true,
+            "randomize": false,
             "radix": "octal",
             "lower": 0,
             "upper": 65535
         },
         "localDeclarations": false,
         "propertyIndirection": false,
-        "selfDefending": true,
-        "stringLiterals": true,
-        "propertySparsing": true,
-        "variableGrouping": true
+        "selfDefending": false,
+        "stringLiterals": false,
+        "propertySparsing": false,
+        "variableGrouping": false
     }
 }
