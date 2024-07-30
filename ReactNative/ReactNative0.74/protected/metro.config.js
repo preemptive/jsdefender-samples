@@ -6,7 +6,7 @@
  */
 
 const { getDefaultConfig } = require('@react-native/metro-config');
-const jsdefenderMetroPlugin = require('../../../../jsdefender-celestial-webpack-upgrade/packages/jsdefender-metro-plugin');
+const jsdefenderMetroPlugin = require('@preemptive/jsdefender-metro-plugin');
 
 // Default Metro configuration
 const defaultConfig = getDefaultConfig(__dirname);
