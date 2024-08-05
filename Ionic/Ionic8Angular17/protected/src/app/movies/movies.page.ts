@@ -10,7 +10,7 @@ import { ItemsService } from '../items.service';
 })
 export class MoviesPage implements OnInit {
 
-  public folder: string;
+  public folder: string | undefined;
   movies: any;
   loader: any;
 

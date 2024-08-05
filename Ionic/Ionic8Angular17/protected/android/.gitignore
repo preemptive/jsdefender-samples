@@ -6,6 +6,7 @@
 
 # Built application files
 *.apk
+*.aar
 *.ap_
 *.aab
 
@@ -61,6 +62,10 @@ captures/
 
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
+.cxx/
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
 
 # Freeline
 freeline.py
@@ -84,8 +89,16 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
+# Android Profiling
+*.hprof
+
 # Cordova plugins for Capacitor
 capacitor-cordova-android-plugins
 
 # Copied web assets
 app/src/main/assets/public
+
+# Generated Config files
+app/src/main/assets/capacitor.config.json
+app/src/main/assets/capacitor.plugins.json
+app/src/main/res/xml/config.xml

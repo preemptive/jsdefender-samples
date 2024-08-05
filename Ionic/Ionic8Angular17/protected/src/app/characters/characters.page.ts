@@ -10,7 +10,7 @@ import { ItemsService } from '../items.service';
 })
 export class CharactersPage implements OnInit {
 
-  public folder: string;
+  public folder: string | undefined;
   peoples: any;
   loader: any;
 
