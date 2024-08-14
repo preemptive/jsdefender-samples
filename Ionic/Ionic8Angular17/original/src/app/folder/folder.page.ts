@@ -11,7 +11,7 @@ import { ItemsService } from '../items.service';
 })
 export class FolderPage implements OnInit {
 
-  public folder: string;
+  public folder: string | undefined;
   planets: any;
   loader: any;
 

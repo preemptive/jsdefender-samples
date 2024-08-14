@@ -17,7 +17,7 @@
     "rollup": "^2.34.1",
     "rollup-plugin-embed-css": "^1.0.19",
     "rollup-plugin-serve": "^1.1.0",
-    "@preemptive/jsdefender-core": "../../../../../jsdefender-celestial-webpack-upgrade/packages/jsdefender-core",
-    "@preemptive/jsdefender-rollup-plugin": "../../../../../jsdefender-celestial-webpack-upgrade/packages/jsdefender-rollup-plugin"
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-rollup-plugin": "file:assets/preemptive-jsdefender-rollup-plugin-{version}.tgz"
   }
 }

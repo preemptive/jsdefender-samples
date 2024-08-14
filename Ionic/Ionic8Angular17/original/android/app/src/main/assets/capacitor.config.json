@@ -1,16 +1,5 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "preemptive-ionic-angular-sample-app",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  },
-  "cordova": {},
-  "server": {
-    "url": "http://192.168.1.2:8100"
-  }
+	"appId": "io.ionic.starter",
+	"appName": "original",
+	"webDir": "www"
 }
