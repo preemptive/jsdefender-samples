@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import loadable from '@loadable/component'
 import { BrowserRouter, Route } from 'react-router-dom';
 import { createStore } from 'redux';
@@ -16,8 +16,10 @@ const LoginLazyComponent = loadable(() => import('./containers/loginContainer'))
 const HomeLazyComponent = loadable(() => import('./containers/homeContainer'));
 
 const store = createStore(rootReducer, composeWithDevTools());
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-ReactDOM.render(
+root.render(
     <BrowserRouter>
         <Provider store={store}>
             <Switch>
@@ -25,5 +27,5 @@ ReactDOM.render(
                 <Route exact path='/home' component={HomeLazyComponent} />
             </Switch>
         </Provider>
-    </BrowserRouter>, document.getElementById('root')
+    </BrowserRouter>
 );
