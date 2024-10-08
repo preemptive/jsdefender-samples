@@ -74,3 +74,8 @@ Info: Protected files rendered successfully.
 
 ### **enableInDevelopmentMode**
 By setting `enableInDevelopmentMode` option of the plugin to true, the protection is enabled for all modes('development', 'production'). To change this behavior, set this option as false. For more details refer to this [link](https://www.preemptive.com/jsdefender/userguide/en/webpack_plugin.html).
+
+### CSP Error for unsafe-eval
+Electron forge using webpack and webpack-ts template faces runtime CSP(Content Security Policy) error while using the 'npm run start' command to run this on the dev mode. However 'npm un make' to build the production will not face this issue. This is the issue of electron forge webpack.
+In order to allow this unsafe-eval there is a config in the package.json 'devContentSecurityPolicy'. This config allows the unsafe-eval and thus, allows the application to run in the dev mode along with production as well.
+This config fix the issue only for Electron forge, as eval is also not allowed by the JSDefender, this config will not fix the JSDefender issue, as it is related to core JSDefender.

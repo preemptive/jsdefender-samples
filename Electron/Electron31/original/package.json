@@ -30,9 +30,7 @@
         {
           "name": "@electron-forge/maker-rpm"
         },
-        {
-          "name": "@electron-forge/maker-dmg"
-        },
+
         {
           "name": "@electron-forge/maker-zip"
         }
@@ -42,6 +40,7 @@
           "name": "@electron-forge/plugin-webpack",
           "config": {
             "mainConfig": "./webpack.main.config.js",
+            "devContentSecurityPolicy": "default-src * 'self' blob: data: gap; style-src * 'self' 'unsafe-inline' blob: data: gap; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap; object-src * 'self' blob: data: gap; img-src * 'self' 'unsafe-inline' blob: data: gap; connect-src 'self' * blob: data: gap; frame-src * 'self' blob: data: gap;",
             "renderer": {
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
@@ -58,13 +57,13 @@
     }
   },
   "devDependencies": {
-    "@electron-forge/cli": "~6.0.0-beta.54",
-    "@electron-forge/maker-deb": "~6.0.0-beta.54",
-    "@electron-forge/maker-dmg": "~6.0.0-beta.54",
-    "@electron-forge/maker-rpm": "~6.0.0-beta.54",
-    "@electron-forge/maker-squirrel": "~6.0.0-beta.54",
-    "@electron-forge/maker-zip": "~6.0.0-beta.54",
-    "@electron-forge/plugin-webpack": "6.0.0-beta.54",
+    "@electron-forge/cli": "~6.0.0",
+    "@electron-forge/maker-deb": "~6.0.0",
+    "@electron-forge/maker-dmg": "~6.0.0",
+    "@electron-forge/maker-rpm": "~6.0.0",
+    "@electron-forge/maker-squirrel": "~6.0.0",
+    "@electron-forge/maker-zip": "~6.0.0",
+    "@electron-forge/plugin-webpack": "6.0.0",
     "@marshallofsound/webpack-asset-relocator-loader": "~0.5.0",
     "@typescript-eslint/eslint-plugin": "~4.0.1",
     "@typescript-eslint/parser": "~4.0.1",
