@@ -1,0 +1,50 @@
+{
+  "name": "preemptive-react-sample-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@loadable/component": "~5.14.1",
+    "@redux-devtools/extension": "^3.3.0",
+    "@testing-library/jest-dom": "~5.11.4",
+    "@testing-library/react": "~11.1.0",
+    "@testing-library/user-event": "~12.1.10",
+    "axios": "^1.7.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "~9.2.0",
+    "react-router-dom": "~5.2.0",
+    "react-scripts": "^5.0.1",
+    "serve": "^14.0.1",
+    "web-vitals": "~1.0.1"
+  },
+  "scripts": {
+    "start:dev": "react-scripts start",
+    "start:prod": "react-scripts build && serve -s build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+ "browserslist": {
+  "production": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "not dead",
+    "not < 0.5%"
+  ],
+  "development": [
+    "last 1 Chrome version",
+    "last 1 Firefox version",
+    "last 1 Safari version"
+  ]
+},
+  "devDependencies": {
+    "file-loader": "~6.2.0"
+  }
+}
