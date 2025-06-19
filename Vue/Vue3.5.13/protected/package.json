@@ -1,0 +1,49 @@
+{
+  "name": "preemptive-vue-sample-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:dev": "vue-cli-service serve",
+    "start:prod": "vue-cli-service build && serve -s dist",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "~0.21.1",
+    "core-js": "~3.6.5",
+    "serve": "~11.3.2",
+    "vue": "^3.4.25",
+    "vue-router": "^4.3.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-2.8.1.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "file:assets/preemptive-jsdefender-webpack-plugin-2.8.1.tgz",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-service": "~5.0.6",
+    "@vue/compiler-sfc": "~3.4.31",
+    "@vue/devtools": "~5.3.4",
+    "babel-eslint": "~10.1.0",
+    "eslint": "7.32.0",
+    "eslint-plugin-vue": "~7.20.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+  "last 2 versions",
+  "not dead",
+  "not < 0.5%"
+]
+}
