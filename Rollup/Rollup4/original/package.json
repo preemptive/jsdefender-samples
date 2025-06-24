@@ -1,0 +1,21 @@
+{
+  "name": "rollup4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "build:prod-win": "set NODE_ENV=production && npm run build",
+    "build:prod-linux": "NODE_ENV=production npm run build"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.15"
+  },
+  "devDependencies": {
+    "@rollup/plugin-html": "^2.0.0",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^3.0.0"
+  }
+}

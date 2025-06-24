@@ -1,0 +1,90 @@
+{
+  "name": "preemptive-electron-sample-app",
+  "productName": "preemptive-electron-sample-app",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".webpack/main",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "Preemptive",
+    "email": "preemptive@preemptive.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel"
+        },
+        {
+          "name": "@electron-forge/maker-deb"
+        },
+        {
+          "name": "@electron-forge/maker-rpm"
+        },
+        {
+          "name": "@electron-forge/maker-dmg"
+        },
+        {
+          "name": "@electron-forge/maker-zip"
+        }
+      ],
+      "plugins": [
+        {
+          "name": "@electron-forge/plugin-webpack",
+          "config": {
+            "mainConfig": "./webpack.main.config.js",
+            "devContentSecurityPolicy": "connect-src 'self' https://swapi.py4e.com 'unsafe-eval'",
+            "renderer": {
+              "config": "./webpack.renderer.config.js",
+              "entryPoints": [
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/renderer.ts",
+                  "name": "main_window"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "~7.8.0",
+    "@electron-forge/maker-deb": "~7.8.0",
+    "@electron-forge/maker-dmg": "~7.8.0",
+    "@electron-forge/maker-rpm": "~7.8.0",
+    "@electron-forge/maker-squirrel": "~7.8.0",
+    "@electron-forge/maker-zip": "~7.8.0",
+    "@electron-forge/plugin-webpack": "~7.8.0",
+    "@marshallofsound/webpack-asset-relocator-loader": "~0.5.0",
+    "@typescript-eslint/eslint-plugin": "~4.0.1",
+    "@typescript-eslint/parser": "~4.0.1",
+    "copy-webpack-plugin": "~6.4.1",
+    "css-loader": "~4.2.1",
+    "electron": "^35.1.5",
+    "eslint": "~7.6.0",
+    "eslint-plugin-import": "^2.20.0",
+    "file-loader": "~6.2.0",
+    "fork-ts-checker-webpack-plugin": "~9.1.0",
+    "node-loader": "~1.0.1",
+    "style-loader": "~1.2.1",
+    "ts-loader": "~8.0.2",
+    "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "axios": "^1.7.2",
+    "electron-squirrel-startup": "~1.0.1",
+    "html-webpack-plugin": "^5.6.3"
+  }
+}

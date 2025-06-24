@@ -1,0 +1,7 @@
+{
+  "name": "preemptive-ionic-angular-sample-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
