@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://swapi.dev/api/";
+const BASE_URL = "https://swapi.py4e.com";
 
 const apiCall = (url) => axios.get(`${BASE_URL}/${url}`);
 
