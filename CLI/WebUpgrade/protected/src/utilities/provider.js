@@ -1,6 +1,6 @@
 class Provider {
   constructor() {
-    this.BASE_URL = "https://swapi.dev/api/";
+    this.BASE_URL = "https://swapi.py4e.com/api/";
   }
 
   getUserProfile(user) {
