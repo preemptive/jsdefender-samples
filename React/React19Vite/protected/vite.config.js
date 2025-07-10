@@ -5,7 +5,7 @@ import JSDefenderRollupPlugin from '@preemptive/jsdefender-rollup-plugin';
 const jsdConfig = {
   configurationFile: "jsdefender.config.json",
   quietMode: false,
-  enableInDevelopmentMode: true,
+  enableInDevelopmentMode: false,
 };
 
 
