@@ -34,7 +34,7 @@ DOB: `19BBY`
 
 ## Commands
 For deployment: `npm run start-unix` or `npm run start-windows` depending on your platform.
-After running this command in the root of the sample project, in your web browser navigate to http://localhost:8080 to view the sample.
+After running this command in the root of the sample project, in your web browser navigate to http://localhost:8080 or http://localhost:8081 to view the sample.
 
 ## How It Works
 
