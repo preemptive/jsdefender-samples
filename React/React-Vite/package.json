@@ -64,8 +64,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
-    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-2.9.0.tgz",
-    "@preemptive/jsdefender-rollup-plugin": "./assets/preemptive-jsdefender-rollup-plugin-2.9.0.tgz",
+    "@preemptive/jsdefender-core": "file:assets/preemptive-jsdefender-core-{version}.tgz",
+    "@preemptive/jsdefender-rollup-plugin": "./assets/preemptive-jsdefender-rollup-plugin-{version}.tgz",
+    "@preemptive/jsdefender-webpack-plugin": "./assets/preemptive-jsdefender-webpack-plugin-{version}.tgz",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
     "@types/react": "^19.0.11",
